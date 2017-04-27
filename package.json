@@ -1,0 +1,21 @@
+{
+  "name": "fy4app",
+  "version": "1.0.0",
+  "description": "fy4 app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.3.0",
+    "log4js": "^1.1.1",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.6",
+    "morgan": "^1.8.1",
+    "pm2": "^2.4.6",
+    "restify": "^4.3.0",
+    "silly-datetime": "^0.1.2"
+  }
+}
