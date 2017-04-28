@@ -31,7 +31,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 100
+                poolSize: 8000
             }
         };
 
@@ -64,7 +64,7 @@
             // Task_List_LMI(function (callback) {
             //     console.log("lmi test");
             // })
-            // timeTwoFunc();
+             //timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
                 timeTwoFunc();
@@ -135,8 +135,16 @@
                 get_TaskState(function () {
                     console.log("2 get_TaskState end");
                 });
-                get_TaskNearState(function () {
-                    console.log("3 get_TaskNearState end");
+                get_TaskNearState_AGRI(function () {
+                    console.log("3 get_TaskNearState_AGRI end");
+                });
+
+                get_TaskNearState_GIIRS(function () {
+                    console.log("3 get_TaskNearState_GIIRS end");
+                });
+
+                get_TaskNearState_LMI(function () {
+                    console.log("3 get_TaskNearState_LMI end");
                 });
                 get_SubDasStateState(function () {
                     console.log("4 get_SubDasStateState end");
@@ -148,16 +156,24 @@
                     console.log(" 6 Fault_level_E end");
                 });
                 Task_List_GIIRS(function () {
-                    console.log(" 7 Task_List end");
+                    console.log(" 7 Task_List_GIIRS end");
                 });
                 Task_List_AGRI(function () {
-                    console.log(" 7 Task_List end");
+                    console.log(" 7 Task_List_AGRI end");
                 });
                 Task_List_LMI(function () {
-                    console.log(" 7 Task_List end");
+                    console.log(" 7 Task_List_LMI end");
                 });
-                Task_Detail(function () {
-                    console.log(" 8 Task_Detail end");
+                Task_Detail_GIIRS(function () {
+                    console.log(" 8 Task_Detail_GIIRS end");
+                });
+
+                Task_Detail_AGRI(function () {
+                    console.log(" 8 Task_Detail_AGRI end");
+                });
+
+                Task_Detail_LMI(function () {
+                    console.log(" 8 Task_Detail_LMI end");
                 });
 
                 //循环计数
@@ -177,9 +193,21 @@
             }
 
             //任务当前、上一个、下一个状态，add by lihy
-            function get_TaskNearState(callback) {
-                console.log("3.任务当前 上一个 下一个状态 获取开始 ");
-                require('./process/tasknear.js')(callback);
+            function get_TaskNearState_AGRI(callback) {
+                console.log("3.任务AGRI当前 上一个 下一个状态 获取开始 ");
+                require('./process/tasknear_agri.js')(callback);
+            }
+
+            //任务当前、上一个、下一个状态，add by lihy
+            function get_TaskNearState_GIIRS(callback) {
+                console.log("3.任务GIIRS 上一个 下一个状态 获取开始 ");
+                require('./process/tasknear_giirs.js')(callback);
+            }
+
+            //任务当前、上一个、下一个状态，add by lihy
+            function get_TaskNearState_LMI(callback) {
+                console.log("3.任务LMI 上一个 下一个状态 获取开始 ");
+                require('./process/tasknear_lmi.js')(callback);
             }
 
             //分系统的设备状态，add by lihy
@@ -221,9 +249,21 @@
 
 
             //任务详情
-            function Task_Detail(callback) {
-                console.log("8   获取开始 ");
-                require('./process/taskdetail_giirs.js')(callback);
+            function Task_Detail_GIIRS(callback) {
+                console.log("8  Task_Detail_GIIRS 获取开始 ");
+                require('./process/taskdetail_giirs.js');
+            }
+
+            //任务详情
+            function Task_Detail_AGRI(callback) {
+                console.log("8  Task_Detail_AGRI 获取开始 ");
+                require('./process/taskdetail_agri.js')(callback);
+            }
+
+            //任务详情
+            function Task_Detail_LMI(callback) {
+                console.log("8  Task_Detail_LMI 获取开始 ");
+                require('./process/taskdetail_lmi.js')(callback);
             }
         })();
     })();

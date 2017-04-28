@@ -84,7 +84,7 @@
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
-            var m_APIPath = "/_ds/mcs/task/list/giirs?date=" + m_DateStr + "&time=" + m_TimeStr;
+            var m_APIPath = "/_ds/mcs/task/list/lmi?date=" + m_DateStr + "&time=" + m_TimeStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -110,7 +110,7 @@
             //获取每一个Task的 ID
             var m_TaskID = taskinfo.task_id;
             var m_DateStr = moment().utc().format("YYYYMMDD");
-            var m_APIPath = "/_ds/mcs/task/detail/giirs?task_id=" + m_TaskID + "&date=" + m_DateStr;
+            var m_APIPath = "/_ds/mcs/task/detail/lmi?task_id=" + m_TaskID + "&date=" + m_DateStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -123,8 +123,11 @@
                     }
                     else {
                         var m_json = obj.result;
-                        //console.log(JSON.stringify(m_json));
+                        if (m_json === undefined) {
+                            return callback(null,null);
+                        }
                         m_json["task_id"] = m_TaskID;
+                       // console.log(1);
                         callback(null, m_json);
                     }
                 });
@@ -135,7 +138,7 @@
         function _DeleteAllInfo(callback) {
 
             var conditions = {
-                inst:'giirs'
+                inst:'lmi'
             };
             TaskDetailSchema
                 .remove(conditions, function (err) {
@@ -153,8 +156,11 @@
         //4. 插入详情列表中的 每一条信息
         function InsertDataSchema(DataInfo, callback) {
             //console.log(DataInfo);
+            if(DataInfo===null){
+                return callback(null, null);
+            }
             var schema = new TaskDetailSchema();
-            schema.initData(DataInfo,'giirs');
+            schema.initData(DataInfo,'lmi');
 
             schema.save(function (err) {
                 if (err) {

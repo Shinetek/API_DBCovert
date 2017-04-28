@@ -34,6 +34,7 @@
          "task_oper": "N"
          */
         task_id            : {type: String},
+        inst: {type: String},
         order: {type: String},
         sys: [{
             end_err: {type: String},
@@ -57,11 +58,15 @@
         }]
     });
 
-    TaskDetailSchema.methods.initData = function (body) {
+    TaskDetailSchema.methods.initData = function (body,inst) {
         var self = this;
         for (var prop in body) {
             self[prop] = body[prop];
         }
+        if(self.task_id === undefined) {
+            self.task_id = "";
+        }
+        self.inst = inst;
     };
     TaskDetailSchema.methods.reportVerify = function (body) {
 
