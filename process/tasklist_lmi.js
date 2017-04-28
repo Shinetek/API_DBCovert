@@ -66,7 +66,7 @@
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
-            var m_APIPath = "/_ds/mcs/task/list/giirs?date=" + m_DateStr + "&time=" + m_TimeStr;
+            var m_APIPath = "/_ds/mcs/task/list/lmi?date=" + m_DateStr + "&time=" + m_TimeStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -86,7 +86,9 @@
         }
 
         function _DeleteAllInfo(callback) {
-            var conditions = {};
+            var conditions = {
+                inst: "lmi"
+            };
             TaskSchema
                 .remove(conditions, function (err) {
                     if (err) {
@@ -101,7 +103,7 @@
 
         function InsertDataSchema(DataInfo, callback) {
                      var schema = new TaskSchema();
-            schema.initData(DataInfo);
+            schema.initData(DataInfo, "lmi");
             schema.save(function (err) {
                 if (err) {
                     console.log(err);

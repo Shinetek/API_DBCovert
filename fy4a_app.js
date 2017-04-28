@@ -61,7 +61,9 @@
             var timer = new Timer(interval);
 
             //初始化立刻运行一次
-
+            // Task_List_LMI(function (callback) {
+            //     console.log("lmi test");
+            // })
             // timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
@@ -85,10 +87,16 @@
                             Fault_level_E(callback5);
                         },
                         function (callback6) {
-                            Task_List(callback6);
+                            Task_List_GIIRS(callback6);
                         },
                         function (callback7) {
                             Task_Detail(callback7);
+                        },
+                        function (callback8) {
+                            Task_List_AGRI(callback8);
+                        },
+                        function (callback9) {
+                            Task_List_LMI(callback9);
                         }
                     ],
                     function (err, results) {
@@ -139,7 +147,13 @@
                 Fault_level_E(function () {
                     console.log(" 6 Fault_level_E end");
                 });
-                Task_List(function () {
+                Task_List_GIIRS(function () {
+                    console.log(" 7 Task_List end");
+                });
+                Task_List_AGRI(function () {
+                    console.log(" 7 Task_List end");
+                });
+                Task_List_LMI(function () {
                     console.log(" 7 Task_List end");
                 });
                 Task_Detail(function () {
@@ -187,17 +201,29 @@
                 require('./process/faultlevelE.js')(callback);
             }
 
-            //任务列表
-            function Task_List(callback) {
-                console.log("7   获取开始 ");
-                require('./process/tasklist.js')(callback);
+            //任务列表 giirs
+            function Task_List_GIIRS(callback) {
+                console.log("7   获取开始giirs ");
+                require('./process/tasklist_giirs.js')(callback);
+            }
+
+            //任务列表 agri
+            function Task_List_AGRI(callback) {
+                console.log("7   获取开始agri ");
+                require('./process/tasklist_agri.js')(callback);
+            }
+
+            //任务列表 lmi
+            function Task_List_LMI(callback) {
+                console.log("7   获取开始lmi ");
+                require('./process/tasklist_lmi.js')(callback);
             }
 
 
             //任务详情
             function Task_Detail(callback) {
                 console.log("8   获取开始 ");
-                require('./process/taskdetail.js')(callback);
+                require('./process/taskdetail_giirs.js')(callback);
             }
         })();
     })();

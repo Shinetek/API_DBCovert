@@ -15,19 +15,22 @@
         name: {type: String},
         status: {type: String},
         task_id: {type: String},
-        time: {type: String}
+        time: {type: String},
+        inst: {type: String}
         /*   "name": "冷空观测",
          "status": "success",
          "task_id": "GPS20170426000000",
-         "time": "000000"*/
+         "time": "000000",
+         "inst":agri,giirs,lmi*/
 
     });
 
-    TaskSchema.methods.initData = function (body) {
+    TaskSchema.methods.initData = function (body, inst) {
         var self = this;
         for (var prop in body) {
             self[prop] = body[prop];
         }
+        self.inst = inst;
     };
     TaskSchema.methods.reportVerify = function (body) {
 
