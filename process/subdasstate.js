@@ -26,7 +26,7 @@
                 if (err) {
                     callback(err, null);
                 } else {
-                    callback(err, null);
+                    callback(null, null);
                 }
             });
     };

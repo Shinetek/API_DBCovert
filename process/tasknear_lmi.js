@@ -20,29 +20,31 @@
         version:'0.0.1'
     });
     function _deleteAllInfo(callback) {
-        var conditions = {};
+        var conditions = {
+            inst:'lmi'
+        };
         taskNearSchema
             .remove(conditions, function (err) {
                 if (err) {
                     callback(err, null);
                 } else {
-                    callback(err, null);
+                    callback(null, null);
                 }
             });
     };
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-         client.get("/_ds/mcs/task/near/agri?date="+ month + "&time=" + hour,function (err,req,res,obj) {
+         client.get("/_ds/mcs/task/near/lmi?date="+ month + "&time=" + hour,function (err,req,res,obj) {
              //
              var schema = new taskNearSchema();
-             schema.initData(obj.result);
+             schema.initData(obj.result,'lmi');
              schema.save(function (err) {
                  if (err) {
                      callback(err, null);
                      console.log("save error.");
                  }
                  else {
-                     console.log("tasknear save ok.");
+                     console.log("tasknear lmi save ok.");
                      callback(null, null);
                  }
              })

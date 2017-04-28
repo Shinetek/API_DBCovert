@@ -92,10 +92,10 @@
             TaskSchema
                 .remove(conditions, function (err) {
                     if (err) {
-                        console.log("remove TaskSchema 失败");
+                        console.log("remove TaskSchema giirs失败");
                         callback(err, null);
                     } else {
-                        console.log("remove TaskSchema 成功");
+                        console.log("remove TaskSchema giirs成功");
                         callback(null, null);
                     }
                 });
