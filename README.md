@@ -6,8 +6,7 @@ api 转化 mongodb 的一个小程序
     pm2 显示名称
      "name": "fy4a_app",
     pm2 运行文件
-     "script":"./fy4a_app.js"
-     
+     "script":"./fy4a_app.js"     
     pm2 说明
        实现如下URL转化
        http://10.24.240.73:8080/_ds/mcs/faultlog/stat?date=20170426  // 分系统的故障状态 
