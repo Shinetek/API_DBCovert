@@ -63,7 +63,7 @@
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
-            var m_APIPath = "/_ds/mcs/task/list/lmi?date=" + m_DateStr + "&time=" + m_TimeStr;
+            var m_APIPath = "/RSMS/api/rest/mcs/task/list/lmi?date=" + m_DateStr + "&time=" + m_TimeStr;
             console.log(m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,

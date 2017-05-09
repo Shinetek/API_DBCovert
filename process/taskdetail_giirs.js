@@ -84,7 +84,7 @@
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
-            var m_APIPath = "/_ds/mcs/task/list/giirs?date=" + m_DateStr + "&time=" + m_TimeStr;
+            var m_APIPath = "/RSMS/api/rest/mcs/task/list/giirs?date=" + m_DateStr + "&time=" + m_TimeStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -110,7 +110,7 @@
             //获取每一个Task的 ID
             var m_TaskID = taskinfo.task_id;
             var m_DateStr = moment().utc().format("YYYYMMDD");
-            var m_APIPath = "/_ds/mcs/task/detail/giirs?task_id=" + m_TaskID + "&date=" + m_DateStr;
+            var m_APIPath = "/RSMS/api/rest/mcs/task/detail/giirs?task_id=" + m_TaskID + "&date=" + m_DateStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'

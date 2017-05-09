@@ -15,7 +15,8 @@
     var _ = require('lodash');
 
     var TimerLogSchema = new Schema({
-        converttime: {type: String}
+        converttime: {type: String},
+        sys: {type: String}
     });
 
     TimerLogSchema.methods.initData = function (body) {
@@ -42,6 +43,5 @@
         } else {
             return true;
         }
-
     }
 })();

@@ -56,6 +56,7 @@
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
+            interval = interval + 1500;
             var timer = new Timer(interval);
 
 
@@ -84,7 +85,7 @@
                     console.log(" 7 Task_List_LMI end");
                 });
                 //循环计数
-                require('./process/timerlog.js')();
+                require('./process/timerlog.js')("fy4a_task_list");
             }
 
 

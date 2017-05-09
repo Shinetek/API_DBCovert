@@ -71,7 +71,7 @@
 
         //1. 从API中 获取 json 数据
         function _getDataInfo(sysname, callback) {
-            var m_APIPath = "/_ds/mcs/faultlog/list/" + sysname + "?status=undeal&fault_level=F&start_index=1&end_index=1000";
+            var m_APIPath = "/RSMS/api/rest/mcs/faultlog/list/" + sysname + "?status=undeal&fault_level=F&start_index=1&end_index=1000";
             console.log(basePath + m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,

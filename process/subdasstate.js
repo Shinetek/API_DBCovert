@@ -32,7 +32,7 @@
     };
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-        client.get("/_ds/mcs/resource/dts_station?date=" + month + "&time=" + hour, function (err, req, res, obj) {
+        client.get("/RSMS/api/rest/mcs/resource/dts_station?date=" + month + "&time=" + hour, function (err, req, res, obj) {
             async.each(obj.result, function (data, callback) {
                 var schema = new subDasStateSchema();
                 schema.initData(data);

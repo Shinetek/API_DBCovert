@@ -101,7 +101,7 @@
 
 
                 //循环计数
-                require('./process/timerlog.js')();
+                require('./process/timerlog.js')("fy4a_app");
             }
 
             //分系统的故障状态，add by lihy

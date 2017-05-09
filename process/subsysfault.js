@@ -29,7 +29,7 @@
     };
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-         client.get("/_ds/mcs/faultlog/stat?date="+ time,function (err,req,res,obj) {
+         client.get("/RSMS/api/rest/mcs/faultlog/stat?date="+ time,function (err,req,res,obj) {
             var schema = new subSysFaultSchema();
             //console.log(obj);
             schema.initData(obj.result);

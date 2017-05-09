@@ -77,7 +77,7 @@
 
                 get_Fault_level_F();
                 //循环计数
-                require('./process/timerlog.js')();
+                require('./process/timerlog.js')("fy4a_level_1");
             }
 
             //2级故障

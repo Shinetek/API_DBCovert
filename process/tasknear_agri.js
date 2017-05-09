@@ -34,7 +34,7 @@
     };
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-         client.get("/_ds/mcs/task/near/agri?date="+ month + "&time=" + hour,function (err,req,res,obj) {
+         client.get("/RSMS/api/rest/mcs/task/near/agri?date="+ month + "&time=" + hour,function (err,req,res,obj) {
              //
              var schema = new taskNearSchema();
              schema.initData(obj.result,'agri');

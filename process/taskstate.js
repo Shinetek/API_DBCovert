@@ -33,7 +33,7 @@
     };
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-        client.get("/_ds/mcs/task/stat?date=" + month + "&time=" + hour, function (err, req, res, obj) {
+        client.get("/RSMS/api/rest/mcs/task/stat?date=" + month + "&time=" + hour, function (err, req, res, obj) {
             //
             var schema = new taskStateSchema();
             schema.initData(obj.result);

@@ -59,7 +59,7 @@
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
-            interval = interval + 300000;
+            interval = interval + 200000;
             var timer = new Timer(interval);
             timeTwoFunc();
             //设置定时器
@@ -77,7 +77,7 @@
 
                 get_Fault_level_F();
                 //循环计数
-                require('./process/timerlog.js')();
+                require('./process/timerlog.js')("fy4a_level_2");
             }
 
             //2级故障
