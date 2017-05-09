@@ -1,0 +1,100 @@
+{
+  "apps": [
+    {
+      "name": "athena_auth_Service",
+      "script": "../auth/auth.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../auth/",
+      "output": "../pm2_log/auth-out.log",
+      "error": "../pm2_log/auth-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "athena_pm-api_Service",
+      "script": "../pm-api/pm-api.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../pm-api/",
+      "output": "../pm2_log/pm-api-out.log",
+      "error": "../pm2_log/pm-api-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "athena_pm_Service",
+      "script": "../pm-app/pm.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../pm-app/",
+      "output": "../pm2_log/pm-out.log",
+      "error": "../pm2_log/pm-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "ProjectStatic",
+      "script": "../pm-api/scripts/projectstatic-script.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../pm-api/",
+      "output": "../pm2_log/project-static-out.log",
+      "error": "../pm2_log/project-static-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "AutoUpdateApp",
+      "script": "../AutoUpdateApp/app.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../AutoUpdateApp/",
+      "output": "../pm2_log/AutoUpdateApp.log",
+      "error": "../pm2_log/AutoUpdateApp.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+   },
+   {
+      "name": "FY4A-SGS-Service",
+      "script": "../FY4ASGS-Monitor/fy4a-sgs-service.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../FY4ASGS-Monitor/",
+      "output": "../pm2_log/FY4A-SGS-Service.log",
+      "error": "../pm2_log/FY4A-SGS-Service.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+   },
+    {
+      "name": "shinetek-api",
+      "script": "../api/worldview-api.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../api",
+      "output": "../pm2_log/worldview-api-out.log",
+      "error": "../pm2_log/worldview-api-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "shinetek-app",
+      "script": "../app/worldview.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "kill_timeout": 30000,
+      "cwd": "../app",
+      "output": "../pm2_log/worldview-app-out.log",
+      "error": "../pm2_log/worldview-app-error.err",
+      "logDateFormat":"YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
+    }
+  ]
+}

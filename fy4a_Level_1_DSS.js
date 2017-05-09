@@ -32,7 +32,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 8000
+                poolSize: 2000
             }
         };
 

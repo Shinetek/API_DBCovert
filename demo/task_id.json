@@ -1,0 +1,30 @@
+{
+  "code": "10",
+  "describe": "OK",
+  "result": {
+    "order": "success",
+    "sys": [
+      {
+        "end_err": null,
+        "end_status": "全部完成",
+        "key_job": [],
+        "name": "NRS",
+        "plan_end_dt": "20170426061929",
+        "plan_input": "0",
+        "plan_output": "0",
+        "plan_start_dt": "20170426061500",
+        "ready_err": null,
+        "ready_status": null,
+        "ready_time": null,
+        "real_end_dt": "20170426061748",
+        "real_input": "0",
+        "real_output": "0",
+        "real_start_dt": "20170426061500",
+        "start_err": null,
+        "status": "success",
+        "task_oper": "N"
+      }
+    ]
+  }
+}
+

@@ -32,7 +32,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 8000
+                poolSize: 2000
             }
         };
 
@@ -59,6 +59,7 @@
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
+            interval = interval + 300000;
             var timer = new Timer(interval);
             timeTwoFunc();
             //设置定时器

@@ -32,7 +32,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 8000
+                poolSize: 2000
             }
         };
 
@@ -58,6 +58,7 @@
 
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
+            interval = interval + 100000;
             var Timer = require('./lib/timer.js').Timer;
             var timer = new Timer(interval);
             timeTwoFunc();
@@ -84,8 +85,6 @@
                 console.log("5 CNS 1级异常  获取开始 ");
                 require('./process/faultlevelF.js')("cns");
             }
-
-
         })();
     })();
 

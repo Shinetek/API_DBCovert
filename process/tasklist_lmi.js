@@ -25,15 +25,12 @@
             async.auto({
                 //首先进行删除操作
                 get_data: function (callback) {
-                    /*var m_FJSON = require("../demo/tasklist.json");
-                     var jsonData = m_FJSON.result;
-                     callback(null, jsonData);
-                     */
+
                     _getAPIInfo(callback)
                 },
                 //删除后进行 添加操作
                 del_data: ['get_data', function (results, callback) {
-                    //async code to get some data
+
                     if (results.get_data.length > 0) {
                         _DeleteAllInfo(callback);
                     }
@@ -67,6 +64,7 @@
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
             var m_APIPath = "/_ds/mcs/task/list/lmi?date=" + m_DateStr + "&time=" + m_TimeStr;
+            console.log(m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -102,7 +100,7 @@
         }
 
         function InsertDataSchema(DataInfo, callback) {
-                     var schema = new TaskSchema();
+            var schema = new TaskSchema();
             schema.initData(DataInfo, "lmi");
             schema.save(function (err) {
                 if (err) {

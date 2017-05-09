@@ -1,9 +1,7 @@
 /**
- * Created by liuyp on 2017/04/26
+ * Created by lenovo on 2017/5/9.
+ * 三个仪器的任务详情
  */
-
-/// <reference path="./../typings/index.d.ts" />
-
 (function () {
 
     'use strict';
@@ -31,7 +29,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 1000
+                poolSize: 8000
             }
         };
 
@@ -53,14 +51,13 @@
         //定时运行部分
         (function () {
             // logger.info('开始循环!');
-
+            console.log(new Date() + "开始循环检索！");
 
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
             var timer = new Timer(interval);
 
-            //初始化立刻运行一次
 
             timeTwoFunc();
             //设置定时器
@@ -71,25 +68,41 @@
             //开始 Timer
             timer.start();
 
-
             /**
-             * 行版本
+             * 并行版本 仅仅对任务列表进行入库
              */
             function timeTwoFunc() {//同步进行所有函数
-                console.log(new Date() + "开始循环检索！");
-                Task_Detail(function () {
-                    console.log(" 8 Task_Detail end");
-                });
 
+
+                Task_Detail_GIIRS(function () {
+                    console.log(" 7 Task_List_GIIRS end");
+                });
+                Task_Detail_AGRI(function () {
+                    console.log(" 7 Task_List_AGRI end");
+                });
+                Task_Detail_LMI(function () {
+                    console.log(" 7 Task_List_LMI end");
+                });
                 //循环计数
                 require('./process/timerlog.js')();
             }
 
+            //任务详情
+            function Task_Detail_GIIRS(callback) {
+                console.log("8  Task_Detail_GIIRS 获取开始 ");
+                require('./process/taskdetail_giirs.js')(callback);
+            }
 
             //任务详情
-            function Task_Detail(callback) {
-                console.log("  获取开始 任务详情 ");
-                require('./process/taskdetail.js')(callback);
+            function Task_Detail_AGRI(callback) {
+                console.log("8  Task_Detail_AGRI 获取开始 ");
+                require('./process/taskdetail_agri.js')(callback);
+            }
+
+            //任务详情
+            function Task_Detail_LMI(callback) {
+                console.log("8  Task_Detail_LMI 获取开始 ");
+                require('./process/taskdetail_lmi.js')(callback);
             }
         })();
     })();

@@ -1,0 +1,5 @@
+{
+  "MongodbUrl": "mongodb://shk401:68400145@123.56.135.196:6840/FY4MCS",
+  "APIURL": "http://10.24.189.195:9393",
+  "TimetableInterval": 900000
+}

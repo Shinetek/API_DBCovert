@@ -38,7 +38,7 @@
                 //删除后进行 添加操作
                 del_data: ['get_data', function (results, callback) {
                     //async code to get some data
-                    console.log(results);
+                   // console.log(results);
                     if (!_.isUndefined(results.get_data)) {
                         if (results.get_data.length > -1) {
                             _DeleteAllInfo(sysname, callback);
@@ -54,7 +54,7 @@
                 save_data: ['get_data', 'del_data', function (results, callback) {
                     var m_jsonData = results.get_data;
                     // 遍历 调用 添加函数
-                    console.log("1级 未处理 故障 状态 待差入数据：" + m_jsonData.length);
+                    console.log("1级 未处理 故障 状态 待插入数据：" + m_jsonData.length);
                     async.each(m_jsonData, function (DataInfo, callback) {
                         InsertDataSchema(sysname, DataInfo, callback);
                     }, function (err, result) {

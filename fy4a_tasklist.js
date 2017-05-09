@@ -1,11 +1,7 @@
 /**
- * Created by liuyp on 2017/5/5.
- * 分系统的 数据获取 DTS 错误部分
+ * Created by lenovo on 2017/5/9.
+ * 三个仪器的任务详情
  */
-
-
-/// <reference path="./../typings/index.d.ts" />
-
 (function () {
 
     'use strict';
@@ -21,6 +17,7 @@
     var morgan = require('morgan');
     var mongoose = require('mongoose');
     var path = require('path');
+    var log4js = require('log4js');
     var async = require("async");
 
 
@@ -32,7 +29,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 2000
+                poolSize: 8000
             }
         };
 
@@ -59,8 +56,9 @@
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
-            interval = interval + 160000;
             var timer = new Timer(interval);
+
+
             timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
@@ -71,22 +69,42 @@
             timer.start();
 
             /**
-             * 并行版本
+             * 并行版本 仅仅对任务列表进行入库
              */
             function timeTwoFunc() {//同步进行所有函数
 
-                get_Fault_level_F();
+
+                Task_List_GIIRS(function () {
+                    console.log(" 7 Task_List_GIIRS end");
+                });
+                Task_List_AGRI(function () {
+                    console.log(" 7 Task_List_AGRI end");
+                });
+                Task_List_LMI(function () {
+                    console.log(" 7 Task_List_LMI end");
+                });
                 //循环计数
                 require('./process/timerlog.js')();
             }
 
-            //2级故障
-            function get_Fault_level_F() {
-                console.log("5 cvs 1级异常  获取开始 ");
-                require('./process/faultlevelF.js')("cvs");
+
+            //任务列表 giirs
+            function Task_List_GIIRS(callback) {
+                console.log("7   获取开始giirs ");
+                require('./process/tasklist_giirs.js')(callback);
             }
 
+            //任务列表 agri
+            function Task_List_AGRI(callback) {
+                console.log("7   获取开始agri ");
+                require('./process/tasklist_agri.js')(callback);
+            }
 
+            //任务列表 lmi
+            function Task_List_LMI(callback) {
+                console.log("7   获取开始lmi ");
+                require('./process/tasklist_lmi.js')(callback);
+            }
         })();
     })();
 

@@ -2,7 +2,6 @@
  * Created by liuyp on 2017/04/26
  */
 
-/// <reference path="./../typings/index.d.ts" />
 
 (function () {
 
@@ -64,7 +63,7 @@
             // Task_List_LMI(function (callback) {
             //     console.log("lmi test");
             // })
-             //timeTwoFunc();
+            timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
                 timeTwoFunc();
@@ -74,58 +73,7 @@
             timer.start();
 
             /**
-             * 每一次 timer 运行的时候 执行的函数   todo 并行测试
-             */
-            function timerOnceFunc() {//同步进行所有函数
-
-
-                async.parallel([
-                        function (callback4) {
-                            get_Fault_level_F(callback4);
-                        },
-                        function (callback5) {
-                            Fault_level_E(callback5);
-                        },
-                        function (callback6) {
-                            Task_List_GIIRS(callback6);
-                        },
-                        function (callback7) {
-                            Task_Detail(callback7);
-                        },
-                        function (callback8) {
-                            Task_List_AGRI(callback8);
-                        },
-                        function (callback9) {
-                            Task_List_LMI(callback9);
-                        }
-                    ],
-                    function (err, results) {
-                        console.log("all end!");
-
-                        // the results array will equal ['one','two'] even though
-                        // the second function had a shorter timeout.
-                    });
-                //同步进行所有函数
-                async.parallel([
-                        function (callback1) {
-                            get_SubSysFault(callback1);
-                            // get_TaskState(callback1);
-                            //get_TaskNearState(callback1);
-                            //get_SubDasStateState(callback1);
-                            // get_Fault_level_F(callback1);
-                        }],
-// optional callback
-                    function (err, results) {
-                        console.log("all end!");
-
-                        // the results array will equal ['one','two'] even though
-                        // the second function had a shorter timeout.
-                    });
-
-            }
-
-            /**
-             * 行版本
+             * 并行版本
              */
             function timeTwoFunc() {//同步进行所有函数
 
@@ -149,32 +97,8 @@
                 get_SubDasStateState(function () {
                     console.log("4 get_SubDasStateState end");
                 });
-                get_Fault_level_F(function () {
-                    console.log("5 get_Fault_level_F end");
-                });
-                Fault_level_E(function () {
-                    console.log(" 6 Fault_level_E end");
-                });
-                Task_List_GIIRS(function () {
-                    console.log(" 7 Task_List_GIIRS end");
-                });
-                Task_List_AGRI(function () {
-                    console.log(" 7 Task_List_AGRI end");
-                });
-                Task_List_LMI(function () {
-                    console.log(" 7 Task_List_LMI end");
-                });
-                Task_Detail_GIIRS(function () {
-                    console.log(" 8 Task_Detail_GIIRS end");
-                });
 
-                Task_Detail_AGRI(function () {
-                    console.log(" 8 Task_Detail_AGRI end");
-                });
 
-                Task_Detail_LMI(function () {
-                    console.log(" 8 Task_Detail_LMI end");
-                });
 
                 //循环计数
                 require('./process/timerlog.js')();
@@ -217,54 +141,12 @@
             }
 
 
-            //1级故障
-            function get_Fault_level_F(callback) {
-                console.log("5   获取开始 ");
-                require('./process/faultlevelF.js')(callback);
-            }
-
-            //2级故障
-            function Fault_level_E(callback) {
-                console.log("6   获取开始 ");
-                require('./process/faultlevelE.js')(callback);
-            }
-
-            //任务列表 giirs
-            function Task_List_GIIRS(callback) {
-                console.log("7   获取开始giirs ");
-                require('./process/tasklist_giirs.js')(callback);
-            }
-
-            //任务列表 agri
-            function Task_List_AGRI(callback) {
-                console.log("7   获取开始agri ");
-                require('./process/tasklist_agri.js')(callback);
-            }
-
-            //任务列表 lmi
-            function Task_List_LMI(callback) {
-                console.log("7   获取开始lmi ");
-                require('./process/tasklist_lmi.js')(callback);
-            }
 
 
-            //任务详情
-            function Task_Detail_GIIRS(callback) {
-                console.log("8  Task_Detail_GIIRS 获取开始 ");
-                require('./process/taskdetail_giirs.js');
-            }
 
-            //任务详情
-            function Task_Detail_AGRI(callback) {
-                console.log("8  Task_Detail_AGRI 获取开始 ");
-                require('./process/taskdetail_agri.js')(callback);
-            }
 
-            //任务详情
-            function Task_Detail_LMI(callback) {
-                console.log("8  Task_Detail_LMI 获取开始 ");
-                require('./process/taskdetail_lmi.js')(callback);
-            }
+
+
         })();
     })();
 
