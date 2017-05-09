@@ -22,7 +22,8 @@
         happen_dt: {type: String},
         memo: {type: String},
         person: {type: String},
-        status: {type: String}
+        status: {type: String},
+        sys: {type: String}
     });
 
     faultlevelESchema.methods.initData = function (body) {

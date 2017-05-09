@@ -81,7 +81,7 @@
 
             //2级故障
             function get_Fault_level_F() {
-                console.log("5   获取开始 ");
+                console.log("5 cvs 二级异常  获取开始 ");
                 require('./process/faultlevelE.js')("cvs");
             }
 

@@ -14,18 +14,16 @@
     var basePath = m_config.APIURL;
 
 
+    module.exports = function (sysname) {
 
-
-    module.exports = function (callback) {
-
-        _getAPIJson(callback);
+        _getAPIJson(sysname);
 
         /**
          * 获取API json
          * @returns {{}}
          * @private
          */
-        function _getAPIJson(callback) {
+        function _getAPIJson(sysname) {
 
 
             async.auto({
@@ -35,14 +33,15 @@
                      var jsonData = m_FJSON.result;
                      callback(null, jsonData);*/
                     console.log("2级 未处理 故障 状态 获取开始");
-                    _getDataInfo(callback);
+                    _getDataInfo(sysname, callback);
                 },
                 //删除后进行 添加操作
                 del_data: ['get_data', function (results, callback) {
                     //async code to get some data
-                    if (!_.isUndefined(results.get_listDetail)) {
-                        if (results.get_listDetail.length > -1) {
-                            _DeleteAllInfo(callback);
+                    console.log(results);
+                    if (!_.isUndefined(results.get_data)) {
+                        if (results.get_data.length > -1) {
+                            _DeleteAllInfo(sysname, callback);
                         }
                         else {
                             callback("2级 未处理 故障 状态  返回结构异常", null);
@@ -57,7 +56,7 @@
                     // 遍历 调用 添加函数
                     console.log("2级 未处理 故障 状态 待差入数据：" + m_jsonData.length);
                     async.each(m_jsonData, function (DataInfo, callback) {
-                        InsertDataSchema(DataInfo, callback);
+                        InsertDataSchema(sysname, DataInfo, callback);
                     }, function (err, result) {
                         console.log("所有插值完成");
                         callback(err, result);
@@ -71,9 +70,9 @@
         }
 
         //1. 从API中 获取 json 数据
-        function _getDataInfo(callback) {
-            var m_APIPath = "/_ds/mcs/faultlog/list/dts?status=undeal&fault_level=E&start_index=1&end_index=200";
-            console.log(m_APIPath);
+        function _getDataInfo(sysname, callback) {
+            var m_APIPath = "/_ds/mcs/faultlog/list/" + sysname + "?status=undeal&fault_level=E&start_index=1&end_index=1000";
+            console.log(basePath + m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -93,8 +92,8 @@
         }
 
         //2
-        function _DeleteAllInfo(callback) {
-            var conditions = {};
+        function _DeleteAllInfo(sysname, callback) {
+            var conditions = {"sys": sysname};
             faultlevelESchema
                 .remove(conditions, function (err) {
                     if (err) {
@@ -108,8 +107,8 @@
         }
 
         //3
-        function InsertDataSchema(DataInfo, callback) {
-            console.log(DataInfo);
+        function InsertDataSchema(sysname, DataInfo, callback) {
+            DataInfo.sys = sysname;
             var schema = new faultlevelESchema();
             schema.initData(DataInfo);
             schema.save(function (err) {

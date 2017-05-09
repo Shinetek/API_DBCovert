@@ -1,8 +1,6 @@
 /**
- * Created by liuyp on 2017/5/5.
- * 分系统的 数据获取 DTS 错误部分
+ * Created by liuyp on 2017/04/26
  */
-
 
 /// <reference path="./../typings/index.d.ts" />
 
@@ -21,6 +19,7 @@
     var morgan = require('morgan');
     var mongoose = require('mongoose');
     var path = require('path');
+    var log4js = require('log4js');
     var async = require("async");
 
 
@@ -32,7 +31,7 @@
         var opt_Mongoose = {
             server: {
                 auto_reconnect: true,
-                poolSize: 8000
+                poolSize: 1000
             }
         };
 
@@ -54,12 +53,15 @@
         //定时运行部分
         (function () {
             // logger.info('开始循环!');
-            console.log(new Date() + "开始循环检索！");
+
 
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
             var Timer = require('./lib/timer.js').Timer;
             var timer = new Timer(interval);
+
+            //初始化立刻运行一次
+
             timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
@@ -69,23 +71,26 @@
             //开始 Timer
             timer.start();
 
+
             /**
-             * 并行版本
+             * 行版本
              */
             function timeTwoFunc() {//同步进行所有函数
+                console.log(new Date() + "开始循环检索！");
+                Task_Detail(function () {
+                    console.log(" 8 Task_Detail end");
+                });
 
-                get_Fault_level_F();
                 //循环计数
                 require('./process/timerlog.js')();
             }
 
-            //2级故障
-            function get_Fault_level_F() {
-                console.log("5 mcs 二级异常  获取开始 ");
-                require('./process/faultlevelE.js')("mcs");
+
+            //任务详情
+            function Task_Detail(callback) {
+                console.log("  获取开始 任务详情 ");
+                require('./process/taskdetail.js')(callback);
             }
-
-
         })();
     })();
 
