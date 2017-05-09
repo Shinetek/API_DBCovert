@@ -6,7 +6,7 @@
  *
  * */
 var pm2 = require('pm2');
-var pm2_conf = require("pm2_DBConvert.json");
+var pm2_conf = require("./pm2_DBConvert.json");
 pm2.connect(function (err) {
     if (err) {
         console.error(err);

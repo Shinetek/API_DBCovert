@@ -75,13 +75,13 @@
 
 
                 Task_Detail_GIIRS(function () {
-                    console.log(" 7 Task_List_GIIRS end");
+                    console.log(" 7 Task_Detail_GIIRS end");
                 });
                 Task_Detail_AGRI(function () {
-                    console.log(" 7 Task_List_AGRI end");
+                    console.log(" 7 Task_Detail_AGRI end");
                 });
                 Task_Detail_LMI(function () {
-                    console.log(" 7 Task_List_LMI end");
+                    console.log(" 7 Task_Detail_LMI end");
                 });
                 //循环计数
                 require('./process/timerlog.js')();

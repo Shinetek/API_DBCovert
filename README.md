@@ -1,24 +1,20 @@
 # API_DBCovert
 api 转化 mongodb 的一个小程序
 
-说明
- ###进程1：
+ ----------
+###进程1：
     pm2 显示名称
-     "name": "fy4a_app",
+    "name": "fy4a_app",
     pm2 运行文件
-     "script":"./fy4a_app.js"     
-    pm2 说明
-       实现如下URL转化
-       http://10.24.240.73:8080/_ds/mcs/faultlog/stat?date=20170426  // 分系统的故障状态 
-       http://10.24.240.73:8080/_ds/mcs/task/stat?date=20170426&time=031033 // 任务状态 
-       http://10.24.240.73:8080/_ds/mcs/task/near/agri?date=20170426&time=031033 // 任务的当前 已完成 下一个的状态
-       http://10.24.240.73:8080/_ds/mcs/resource/dts_station?date=20170426&time=031417 // 分系统的设备状态
-    mongodb：
-    
-    
-       
-	   
- ### 进程2
+    "script":"./fy4a_app.js"     
+    pm2 说明       
+    /_ds/mcs/faultlog/stat?date=20170426  // 分系统的故障状态 
+    /_ds/mcs/task/stat?date=20170426&time=031033 // 任务状态 
+    /_ds/mcs/task/near/agri?date=20170426&time=031033 // 任务的当前 已完成 下一个的状态
+    /_ds/mcs/resource/dts_station?date=20170426&time=031417 // 分系统的设备状态 
+
+----------
+### 进程2  CNS 一级故障
     pm2 显示名称
     "name": "fy4a_Level_1_CNS"
     pm2 运行文件
@@ -26,7 +22,7 @@ api 转化 mongodb 的一个小程序
     pm2 说明
     实现如下URL转化
 
-### 进程3
+### 进程3 
  
     pm2 显示名称
       "name": "fy4a_Level_1_CVS"
@@ -38,18 +34,18 @@ api 转化 mongodb 的一个小程序
 ### 进程4
      
        pm2 显示名称
-  "name": "fy4a_Level_1_DSS"
+      "name": "fy4a_Level_1_DSS"
        pm2 运行文件
-  "script": "./fy4a_Level_1_DSS.js",
-  pm2 说明
+      "script": "./fy4a_Level_1_DSS.js",
+      pm2 说明
        实现如下URL转化
    
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_Level_1_DTS",
+ ### 进程5
+     pm2 显示名称
+    "name": "fy4a_Level_1_DTS",
        pm2 运行文件
-  "script": "./fy4a_Level_1_DTS.js",
-  pm2 说明
+    "script": "./fy4a_Level_1_DTS.js",
+     pm2 说明
        实现如下URL转化
    
  ### 进程1

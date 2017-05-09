@@ -8,128 +8,15 @@
       "maxMemoryRestart": "250M"
     },
     {
-      "name": "fy4a_Level_1_CNS",
-      "script": "./fy4a_Level_1_CNS.js",
+      "name": "fy4a_level_1",
+      "script": "./fy4a_level_1.js",
       "exec_mode": "fork",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },
     {
-      "name": "fy4a_Level_1_CVS",
-      "script": "./fy4a_Level_1_CVS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_DSS",
-      "script": "./fy4a_Level_1_DSS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_DTS",
-      "script": "./fy4a_Level_1_DTS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_MCS",
-      "script": "./fy4a_Level_1_MCS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_MRS",
-      "script": "./fy4a_Level_1_MRS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_NRS",
-      "script": "./fy4a_Level_1_NRS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_PGS",
-      "script": "./fy4a_Level_1_PGS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_1_SWS",
-      "script": "./fy4a_Level_1_SWS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    }
-  ,
-    {
-      "name": "fy4a_Level_2_CNS",
-      "script": "./fy4a_Level_2_CNS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_CVS",
-      "script": "./fy4a_Level_2_CVS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_DSS",
-      "script": "./fy4a_Level_2_DSS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_DTS",
-      "script": "./fy4a_Level_2_DTS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_MCS",
-      "script": "./fy4a_Level_2_MCS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_MRS",
-      "script": "./fy4a_Level_2_MRS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_NRS",
-      "script": "./fy4a_Level_2_NRS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_PGS",
-      "script": "./fy4a_Level_2_PGS.js",
-      "exec_mode": "fork",
-      "logDateFormat": "YYYY-MM-DD HH:mm Z",
-      "maxMemoryRestart": "250M"
-    },
-    {
-      "name": "fy4a_Level_2_SWS",
-      "script": "./fy4a_Level_2_SWS.js",
+      "name": "fy4a_level_2",
+      "script": "./fy4a_level_2.js",
       "exec_mode": "fork",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
@@ -140,10 +27,9 @@
       "exec_mode": "fork",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
-    }
-    ,
+    },
     {
-      "name": "fy4a_taskdetail",
+      "name": "fy4a_task_detail",
       "script": "./fy4a_taskdetail.js",
       "exec_mode": "fork",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",

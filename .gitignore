@@ -6,6 +6,7 @@ logs
 npm-debug.log*
 .idea
 .idea*
+config.json
 # Runtime data
 pids
 *.pid
