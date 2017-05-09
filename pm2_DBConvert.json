@@ -4,6 +4,8 @@
       "name": "fy4a_app",
       "script": "./fy4a_app.js",
       "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_app.log",
+      "error": "./pm2_log/fy4a_app.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },
@@ -11,6 +13,8 @@
       "name": "fy4a_level_1",
       "script": "./fy4a_level_1.js",
       "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_level_1.log",
+      "error": "./pm2_log/fy4a_level_1.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },
@@ -18,6 +22,8 @@
       "name": "fy4a_level_2",
       "script": "./fy4a_level_2.js",
       "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_level_2.log",
+      "error": "./pm2_log/fy4a_level_2.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },
@@ -25,6 +31,8 @@
       "name": "fy4a_tasklist",
       "script": "./fy4a_tasklist.js",
       "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_tasklist.log",
+      "error": "./pm2_log/fy4a_tasklist.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },
@@ -32,6 +40,8 @@
       "name": "fy4a_task_detail",
       "script": "./fy4a_taskdetail.js",
       "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_task_detail.log",
+      "error": "./pm2_log/fy4a_task_detail.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     }

@@ -2,7 +2,7 @@
 api 转化 mongodb 的一个小程序
 
  ----------
-###进程1：
+###进程1：基础信息
     pm2 显示名称
     "name": "fy4a_app",
     pm2 运行文件
@@ -14,24 +14,26 @@ api 转化 mongodb 的一个小程序
     /_ds/mcs/resource/dts_station?date=20170426&time=031417 // 分系统的设备状态 
 
 ----------
-### 进程2  CNS 一级故障
+### 进程2   一级故障
     pm2 显示名称
-    "name": "fy4a_Level_1_CNS"
+    "name": "fy4a_level_1"
     pm2 运行文件
-    "script": "./fy4a_Level_1_CNS.js"
+    "script": "./fy4a_level_1.js"
     pm2 说明
-    实现如下URL转化
+    
 
-### 进程3 
+### 进程3  一级故障
  
     pm2 显示名称
-      "name": "fy4a_Level_1_CVS"
-      pm2 运行文件
-    "script": "./fy4a_Level_1_CVS.js"
-     pm2 说明
+      "name": "fy4a_level_2"
+    pm2 运行文件
+    "script": "./fy4a_level_2.js"
+        pm2 说明
+     调用process
+        faultlevelF.js
        实现如下URL转化
 
-### 进程4
+### 进程4 任务列表
      
        pm2 显示名称
       "name": "fy4a_Level_1_DSS"
@@ -40,7 +42,8 @@ api 转化 mongodb 的一个小程序
       pm2 说明
        实现如下URL转化
    
- ### 进程5
+### 进程5 任务详情
+
      pm2 显示名称
     "name": "fy4a_Level_1_DTS",
        pm2 运行文件
@@ -48,143 +51,4 @@ api 转化 mongodb 的一个小程序
      pm2 说明
        实现如下URL转化
    
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_Level_1_MCS",
-       pm2 运行文件
-  "script": "./fy4a_Level_1_MCS.js",
-  pm2 说明
-       实现如下URL转化
- 
- ### 进程1
-   pm2 显示名称
- 
-  "name": "fy4a_Level_1_MRS",
-       pm2 运行文件
-  "script": "./fy4a_Level_1_MRS.js",
-  pm2 说明
-       实现如下URL转化
- 
- ### 进程1
-   pm2 显示名称
-    "name": "fy4a_Level_1_NRS",
-	     pm2 运行文件
-  "script": "./fy4a_Level_1_NRS.js",
-  pm2 说明
-       实现如下URL转化
   
-    ### 进程1
-  
-  
-    pm2 显示名称
-  "name": "fy4a_Level_1_PGS",
-       pm2 运行文件
-  "script": "./fy4a_Level_1_PGS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_Level_1_SWS",
-       pm2 运行文件
-  "script": "./fy4a_Level_1_SWS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1
- 
-   pm2 显示名称
-  "name": "fy4a_Level_2_CNS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_CNS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_Level_2_CVS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_CVS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_Level_2_DSS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_DSS.js",
-  pm2 说明
-       实现如下URL转化
-  
-  
-   ### 进程1
- 
-   pm2 显示名称
-  "name": "fy4a_Level_2_DTS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_DTS.js",
-  pm2 说明
-       实现如下URL转化
-	   
-   ### 进程1
-   pm2 显示名称
- 
-  "name": "fy4a_Level_2_MCS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_MCS.js",
-  pm2 说明
-       实现如下URL转化
-	   
-   ### 进程1
-   pm2 显示名称
- 
-  "name": "fy4a_Level_2_MRS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_MRS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1  
- pm2 显示名称
- 
-  "name": "fy4a_Level_2_NRS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_NRS.js",
-  pm2 说明
-       实现如下URL转化
-  
-   ### 进程1
-   pm2 显示名称
- 
-  "name": "fy4a_Level_2_PGS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_PGS.js",
-  pm2 说明
-       实现如下URL转化
-	   
-   ### 进程1
-   pm2 显示名称
- 
-  "name": "fy4a_Level_2_SWS",
-       pm2 运行文件
-  "script": "./fy4a_Level_2_SWS.js",
-  pm2 说明
-       实现如下URL转化
-   
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_tasklist",
-       pm2 运行文件
-  "script": "./fy4a_tasklist.js",
-  pm2 说明
-       实现如下URL转化
-	   
- ### 进程1
-   pm2 显示名称
-  "name": "fy4a_taskdetail",
-       pm2 运行文件
-  "script": "./fy4a_taskdetail.js",
-  pm2 说明
-       实现如下URL转化
-   
- 
