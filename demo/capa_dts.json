@@ -1,0 +1,60 @@
+{
+  "code": "10",
+  "describe": "OK",
+  "result": [
+    {
+      "instrument": "OMS",
+      "name": "工作方式",
+      "status": "success",
+      "value": "X单脉冲"
+    },
+    {
+      "instrument": "OMS",
+      "name": "SSPA输出功率(dBm)",
+      "status": "success",
+      "value": "40.5"
+    },
+    {
+      "instrument": "OMS",
+      "name": "左旋Eb/N0",
+      "status": "success",
+      "value": "21.61"
+    },
+    {
+      "instrument": "OMS",
+      "name": "左旋Eb/N0",
+      "status": "success",
+      "value": "21.71"
+    },
+    {
+      "instrument": "OMS",
+      "name": "误码率左A",
+      "status": "success",
+      "value": "0"
+    },
+    {
+      "instrument": "OMS",
+      "name": "IFD1 EbN0",
+      "status": "success",
+      "value": "33.14"
+    },
+    {
+      "instrument": "OMS",
+      "name": "IFD1 EbN0",
+      "status": "success",
+      "value": "33.11"
+    },
+    {
+      "instrument": "OMS",
+      "name": "方位角(度)",
+      "status": "success",
+      "value": "204.79"
+    },
+    {
+      "instrument": "OMS",
+      "name": "SSPA1输出功率",
+      "status": "success",
+      "value": "39.0"
+    }
+  ]
+}

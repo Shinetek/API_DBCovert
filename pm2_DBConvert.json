@@ -44,6 +44,15 @@
       "error": "./pm2_log/fy4a_task_detail.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "fy4a_capability",
+      "script": "./fy4a_capability.js",
+      "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_capability.log",
+      "error": "./pm2_log/fy4a_capability.err",
+      "logDateFormat": "YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
     }
   ]
 }
