@@ -60,9 +60,6 @@
             var timer = new Timer(interval);
 
             //初始化立刻运行一次
-            // Task_List_LMI(function (callback) {
-            //     console.log("lmi test");
-            // })
             timeTwoFunc();
             //设置定时器
             timer.on('tick', function () {
@@ -77,12 +74,11 @@
              */
             function timeTwoFunc() {//同步进行所有函数
 
+                //
                 get_SubSysFault(function () {
                     console.log("1  get_SubSysFault end");
                 });
-                get_TaskState(function () {
-                    console.log("2 get_TaskState end");
-                });
+
                 get_TaskNearState_AGRI(function () {
                     console.log("3 get_TaskNearState_AGRI end");
                 });
@@ -98,8 +94,6 @@
                     console.log("4 get_SubDasStateState end");
                 });
 
-
-
                 //循环计数
                 require('./process/timerlog.js')("fy4a_app");
             }
@@ -110,11 +104,7 @@
                 require('./process/subsysfault.js')(callback);
             }
 
-            //任务状态，add by lihy
-            function get_TaskState(callback) {
-                console.log("2.任务状态 获取开始 ");
-                require('./process/taskstate.js')(callback);
-            }
+
 
             //任务当前、上一个、下一个状态，add by lihy
             function get_TaskNearState_AGRI(callback) {

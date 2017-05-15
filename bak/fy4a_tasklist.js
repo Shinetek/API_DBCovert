@@ -27,10 +27,8 @@
     (function () {
 
         var opt_Mongoose = {
-            server: {
-                auto_reconnect: true,
-                poolSize: 8000
-            }
+            server: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}},
+            replset: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}}
         };
 
         mongoose.connect(MONGOOSE_URI, opt_Mongoose);

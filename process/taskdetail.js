@@ -1,8 +1,7 @@
 /**
  * Created by lenovo on 2017/4/26.
+ * 合并为仪器参数
  *
- * 任务 详情获取部分
- * 1.获取当前任务列表
  */
 (function () {
 
@@ -16,13 +15,13 @@
     var moment = require("moment");
     var m_config = require("../config.json");
     var basePath = m_config.APIURL;
-    module.exports = function (callback) {
-        refresh(callback);
-        function refresh(callback) {
+    module.exports = function (sysname, callback) {
+        refresh(sysname, callback);
+        function refresh(sysname, callback) {
             async.auto({
                 //使用　api 获取 当前任务列表状态
                 get_tasklist: function (callback) {
-                    _getTaskList(callback);
+                    _getTaskList(sysname, callback);
                 },
                 get_listDetail: ['get_tasklist', function (results, callback) {
                     // 判断上次 task list 获取的 结果不为空
@@ -44,7 +43,7 @@
                 del_data: ['get_listDetail', function (results, callback) {
                     if (!_.isUndefined(results.get_listDetail)) {
                         if (results.get_listDetail.length > -1) {
-                            _DeleteAllInfo(callback);
+                            _DeleteAllInfo(sysname, callback);
                         }
                         else {
                             callback("err", null);
@@ -61,7 +60,7 @@
                     console.log("需要插入的taskdetail 总数：" + m_jsonData.length);
                     // 遍历 调用 添加函数
                     async.each(m_jsonData, function (DataInfo, callback) {
-                            InsertDataSchema(DataInfo, callback);
+                        InsertDataSchema(DataInfo, sysname, callback);
                     }, function (err, result) {
                         console.log("taskdetail 数据库插入完成");
                         callback(err, result);
@@ -77,14 +76,13 @@
         }
 
         //1. 通过url 获取  task 的 列表 供详情获取使用 json info
-        function _getTaskList(callback) {
-
-
+        function _getTaskList(sysname, callback) {
             //获取当前的年月日时间
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_TimeStr = moment().utc().format("hhmmss");
             //获取基于当前年月日时间的URL
-            var m_APIPath = "/RSMS/api/rest/mcs/task/list/agri?date=" + m_DateStr + "&time=" + m_TimeStr;
+            var m_APIPath = "/RSMS/api/rest/mcs/task/list/" + sysname + "?date=" + m_DateStr + "&time=" + m_TimeStr;
+            console.log(m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
@@ -106,18 +104,18 @@
 
         //2. 通过URL 获取 每一个 task  的详细情况
 
-        function _getTaskDetailInfo(taskinfo, callback) {
+        function _getTaskDetailInfo(taskinfo, sysname, callback) {
             //获取每一个Task的 ID
             var m_TaskID = taskinfo.task_id;
             var m_DateStr = moment().utc().format("YYYYMMDD");
-            var m_APIPath = "/RSMS/api/rest/mcs/task/detail/agri?task_id=" + m_TaskID + "&date=" + m_DateStr;
+            var m_APIPath = "/RSMS/api/rest/mcs/task/detail/" + sysname + "?task_id=" + m_TaskID + "&date=" + m_DateStr;
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
             });
             //todo 修改修改对RL
             client.get(m_APIPath,
-                function (err, req, res, obj) {                    //assert.ifError(err);
+                function (err, req, res, obj) {
                     if (err) {
                         callback(err, null);
                     }
@@ -130,19 +128,24 @@
         }
 
 
-        //3. 删除详情列表中的所有信息
-        function _DeleteAllInfo(callback) {
+        /**
+         * 3 删除详情列表中的相关信息
+         * @param sysname
+         * @param callback
+         * @private
+         */
+        function _DeleteAllInfo(sysname, callback) {
 
             var conditions = {
-                inst:'agri'
+                inst: sysname
             };
             TaskDetailSchema
                 .remove(conditions, function (err) {
                     if (err) {
-                        console.log("删除 TaskDetailinfo 表单 原有内容 失败");
+                        console.log("删除 TaskDetailinfo 表单 " + sysname + " 原有内容 失败");
                         callback(err, null);
                     } else {
-                        console.log("删除 TaskDetailinfo 表单 原有内容 成功");
+                        console.log("删除 TaskDetailinfo 表单 " + sysname + "原有内容 成功");
                         callback(null, null);
                     }
                 });
@@ -150,18 +153,16 @@
 
 
         //4. 插入详情列表中的 每一条信息
-        function InsertDataSchema(DataInfo, callback) {
+        function InsertDataSchema(DataInfo, sysname, callback) {
             //console.log(DataInfo);
             var schema = new TaskDetailSchema();
-            schema.initData(DataInfo,'agri');
-
+            schema.initData(DataInfo, sysname);
             schema.save(function (err) {
                 if (err) {
                     console.log(err);
                     callback(err, null);
                 }
                 else {
-                    //  console.log(schema);
                     callback(null, null);
                 }
             });

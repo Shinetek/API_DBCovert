@@ -27,10 +27,8 @@
     (function () {
 
         var opt_Mongoose = {
-            server: {
-                auto_reconnect: true,
-                poolSize: 8000
-            }
+            server: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}},
+            replset: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}}
         };
 
         mongoose.connect(MONGOOSE_URI, opt_Mongoose);
@@ -55,7 +53,7 @@
 
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
-            interval = interval + 500;
+            interval = interval + 90000;
             var Timer = require('./lib/timer.js').Timer;
             var timer = new Timer(interval);
 
@@ -91,19 +89,19 @@
             //任务详情
             function Task_Detail_GIIRS(callback) {
                 console.log("8  Task_Detail_GIIRS 获取开始 ");
-                require('./process/taskdetail_giirs.js')(callback);
+                require('./process/taskdetail.js')('giirs', callback);
             }
 
             //任务详情
             function Task_Detail_AGRI(callback) {
                 console.log("8  Task_Detail_AGRI 获取开始 ");
-                require('./process/taskdetail_agri.js')(callback);
+                require('./process/taskdetail.js')('agri', callback);
             }
 
             //任务详情
             function Task_Detail_LMI(callback) {
                 console.log("8  Task_Detail_LMI 获取开始 ");
-                require('./process/taskdetail_lmi.js')(callback);
+                require('./process/taskdetail.js')('lmi', callback);
             }
         })();
     })();

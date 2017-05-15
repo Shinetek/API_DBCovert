@@ -6,43 +6,67 @@
     'use strict';
 
     var restify = require('restify');
-    var sd = require('silly-datetime');
-    var time = sd.format(new Date(),'YYYYMMDD');
+
+
+    var moment = require("moment");
     var subSysFaultSchema = require('../module/subsysfault-schema.js');
-   // var testJson = require('../test/tsconfig.json');
+
     var m_config = require("../config.json");
     var basePath = m_config.APIURL;
-    var client = restify.createJsonClient({
-        url:basePath,
-        version:'0.0.1'
-    });
-    function _deleteAllInfo(callback) {
+
+
+    //删除当前所有信息 删除后调用添加
+    function _deleteAllInfo(callback, result, time) {
         var conditions = {};
         subSysFaultSchema
             .remove(conditions, function (err) {
                 if (err) {
                     callback(err, null);
                 } else {
+
+                    _SaveAllInfo(result, time);
                     callback(null, null);
                 }
             });
-    };
+    }
+
+    /**
+     * 删除后调用的添加函数
+     * @param result
+     * @private
+     */
+    function _SaveAllInfo(result, time) {
+        var schema = new subSysFaultSchema();
+        result.savetime = moment().utc().format("YYYYMMDD") + " " + moment().utc().format("hhmmss");
+        result.urltime = time;
+        //初始化
+        schema.initData(result);
+        //保存
+        schema.save(function (err) {
+            if (err) {
+                console.log("subsysfault save error.");
+            }
+            else {
+                console.log("subsysfault save ok.");
+            }
+        })
+    }
+
+    //对外接口函数
     module.exports = function (callback) {
-        _deleteAllInfo(callback);
-         client.get("/RSMS/api/rest/mcs/faultlog/stat?date="+ time,function (err,req,res,obj) {
-            var schema = new subSysFaultSchema();
-            //console.log(obj);
-            schema.initData(obj.result);
-            schema.save(function (err) {
-                if(err){
-                    callback(err,null);
-                    console.log("save error.");
-                }
-                else{
-                    console.log("subsysfault save ok.");
-                    callback(null,null);
-                }
-            })
-         })
+        //var time = sd.format(new Date(), 'YYYYMMDD');
+        //修改为使用UTC时间
+        var time = moment().utc().format("YYYYMMDD");
+
+        //建立获取json 的 client
+        var client = restify.createJsonClient({
+            url: basePath,
+            version: '0.0.1'
+        });
+        client.get("/RSMS/api/rest/mcs/faultlog/stat?date=" + time, function (err, req, res, obj) {
+            if (obj.result != null) {
+                _deleteAllInfo(callback, obj.result, time);
+            }
+        })
     }
 })();

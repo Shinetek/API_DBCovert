@@ -8,11 +8,12 @@
     var subDasStateSchema = new Schema({
         station_name: {type: String},
         status: {type: String},
-        sys_id: {type: String}
+        sys_id: {type: String},
+        urldate: {type: String}
     });
     subDasStateSchema.methods.initData = function (body) {
         var self = this;
-        for(var prop in body){
+        for (var prop in body) {
             self[prop] = body[prop];
         }
     };

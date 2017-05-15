@@ -27,25 +27,16 @@
          * @private
          */
         function _getAPIJson(sysname) {
-
-            var m_DateStr = moment().utc().format("YYYYMMDD");
-            var m_TimeStr = moment().utc().format("hhmmss");
-            var m_str = m_DateStr + " " + m_TimeStr;
             async.auto({
                 //首先进行数据获取操作
                 get_data: function (callback) {
-                    /*   var m_FJSON = require("../demo/capa_" + sysname + ".json");
-                     var jsonData = m_FJSON.result;
-                     callback(null, jsonData);
-                     console.log("capa 状态数据 获取开始");*/
-                    _getDataInfo(sysname, m_DateStr, m_TimeStr, callback);
+                    _getDataInfo(sysname, callback);
                 },
                 //删除后进行 添加操作
                 del_data: ['get_data', function (results, callback) {
-                    //async code to get some data
-                    // console.log(results);
                     if (!_.isUndefined(results.get_data)) {
-                        if (results.get_data.length > -1) {
+                        if (results.get_data.length > 0) {
+                            //删除
                             _DeleteAllInfo(sysname, callback);
                         }
                         else {
@@ -61,7 +52,7 @@
                     // 遍历 调用 添加函数
                     console.log("capa 状态数据 待插入数据：" + m_jsonData.length);
                     async.each(m_jsonData, function (DataInfo, callback) {
-                        InsertDataSchema(sysname, DataInfo, m_str, callback);
+                        InsertDataSchema(sysname, DataInfo, callback);
                     }, function (err, result) {
                         console.log("所有插值完成");
                         callback(err, result);
@@ -75,19 +66,20 @@
         }
 
         //1. 从API中 获取 json 数据
-        function _getDataInfo(sysname, datestr, timeStr, callback) {
-            // RSMS/api/rest/mcs/capability/dts?date=20170511&time=011456
-            // var m_APIPath = "/RSMS/api/rest/mcs/faultlog/list/" + sysname + "?status=undeal&fault_level=E&start_index=1&end_index=100";
-            var m_APIPath = "/RSMS/api/rest/mcs/capability/" + sysname + "?date=" + datestr + "&time=" + timeStr;
+        function _getDataInfo(sysname, callback) {
 
+            var m_DateStr = moment().utc().format("YYYYMMDD");
+            var m_TimeStr = moment().utc().format("hhmmss");
+            var m_APIPath = "/RSMS/api/rest/mcs/capability/" + sysname + "?date=" + m_DateStr + "&time=" + m_TimeStr;
+            console.log(moment().utc());
             console.log(basePath + m_APIPath);
+
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'
             });
             client.get(m_APIPath,
                 function (err, req, res, obj) {
-                    //assert.ifError(err);
                     if (err) {
                         callback(err, null);
                     }
@@ -104,19 +96,21 @@
             CapabilitySchema
                 .remove(conditions, function (err) {
                     if (err) {
-                        console.log("remove capa  失败");
+                        console.log("remove capa  失败" + conditions.sys);
                         callback(err, null);
                     } else {
-                        console.log("remove capa 成功");
+                        console.log("remove capa 成功" + conditions.sys);
                         callback(null, null);
                     }
                 });
         }
 
         //3
-        function InsertDataSchema(sysname, DataInfo, datastr, callback) {
+        function InsertDataSchema(sysname, DataInfo, callback) {
+            var m_DateStr = moment().utc().format("YYYYMMDD");
+            var m_TimeStr = moment().utc().format("hhmmss");
             DataInfo.sys = sysname;
-            DataInfo.datastr = datastr;
+            DataInfo.datastr = m_DateStr + " " + m_TimeStr;
             var schema = new CapabilitySchema();
             schema.initData(DataInfo);
             schema.save(function (err) {
@@ -127,7 +121,6 @@
                 else {
                     callback(null, null);
                 }
-
             });
         }
 

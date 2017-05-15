@@ -42,11 +42,14 @@
         SWS: {
             L1: {type: Number},
             L2: {type: Number}
-        }
+        },
+        //时间保存相关
+        savetime: {type: String},
+        urltime: {type: String}
     });
     subSysFaultSchema.methods.initData = function (body) {
         var self = this;
-        for(var prop in body){
+        for (var prop in body) {
             self[prop] = body[prop];
         }
     };

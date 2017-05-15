@@ -29,16 +29,11 @@
             async.auto({
                 //首先进行删除操作
                 get_data: function (callback) {
-                    /*    var m_FJSON = require("../demo/faultlevelE.json");
-                     var jsonData = m_FJSON.result;
-                     callback(null, jsonData);*/
                     console.log("2级 未处理 故障 状态 获取开始");
                     _getDataInfo(sysname, callback);
                 },
                 //删除后进行 添加操作
                 del_data: ['get_data', function (results, callback) {
-                    //async code to get some data
-                   // console.log(results);
                     if (!_.isUndefined(results.get_data)) {
                         if (results.get_data.length > -1) {
                             _DeleteAllInfo(sysname, callback);

@@ -6,20 +6,19 @@
 
     var restify = require('restify');
     var sd = require('silly-datetime');
-    var date = new Date();
-    var month = sd.format(date, 'YYYYMMDD');
-    var hour = sd.format(date, 'HHmmss');
     var taskStateSchema = require('../module/taskstate-schema.js');
-
     var m_config = require("../config.json");
-
     var basePath = m_config.APIURL;
-
     var client = restify.createJsonClient({
         url: basePath,
         version: '0.0.1'
     });
 
+    /**
+     * 删除所有信息
+     * @param callback
+     * @private
+     */
     function _deleteAllInfo(callback) {
         var conditions = {};
         taskStateSchema
@@ -30,9 +29,22 @@
                     callback(null, null);
                 }
             });
-    };
+    }
+
+    /**
+     * 对外开放函数
+     * @param callback
+     */
     module.exports = function (callback) {
+
+        //新建date
+        var date = new Date();
+        var month = sd.format(date, 'YYYYMMDD');
+        var hour = sd.format(date, 'HHmmss');
+        ///删除原有数据
         _deleteAllInfo(callback);
+        console.log(month + "_" + hour + ":  最近数据获取 taskstate!");
+        console.log("/RSMS/api/rest/mcs/task/stat?date=" + month + "&time=" + hour);
         client.get("/RSMS/api/rest/mcs/task/stat?date=" + month + "&time=" + hour, function (err, req, res, obj) {
             //
             var schema = new taskStateSchema();

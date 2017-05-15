@@ -5,23 +5,22 @@
     'use strict';
 
     var restify = require('restify');
-    var sd = require('silly-datetime');
-    var date = new Date();
-    var month = sd.format(date,'YYYYMMDD');
-    var hour = sd.format(date,'HHmmss');
+
+
     var taskNearSchema = require('../module/tasknear-schema.js');
 
     var m_config = require("../config.json");
-
+    var moment = require("moment");
     var basePath = m_config.APIURL;
 
     var client = restify.createJsonClient({
-        url:basePath,
-        version:'0.0.1'
+        url: basePath,
+        version: '0.0.1'
     });
+
     function _deleteAllInfo(callback) {
         var conditions = {
-            inst:'agri'
+            inst: 'agri'
         };
         taskNearSchema
             .remove(conditions, function (err) {
@@ -31,23 +30,28 @@
                     callback(null, null);
                 }
             });
-    };
+    }
     module.exports = function (callback) {
         _deleteAllInfo(callback);
-         client.get("/RSMS/api/rest/mcs/task/near/agri?date="+ month + "&time=" + hour,function (err,req,res,obj) {
-             //
-             var schema = new taskNearSchema();
-             schema.initData(obj.result,'agri');
-             schema.save(function (err) {
-                 if (err) {
-                     callback(err, null);
-                     console.log("save error.");
-                 }
-                 else {
-                     console.log("tasknear agri save ok.");
-                     callback(null, null);
-                 }
-             })
-         })
+        var date = new Date();
+
+        var month = moment().utc().format("YYYYMMDD");
+        var hour = moment().utc().format("hhmmss");
+
+        client.get("/RSMS/api/rest/mcs/task/near/agri?date=" + month + "&time=" + hour, function (err, req, res, obj) {
+            //
+            var schema = new taskNearSchema();
+            schema.initData(obj.result, 'agri');
+            schema.save(function (err) {
+                if (err) {
+                    callback(err, null);
+                    console.log("save error.");
+                }
+                else {
+                    console.log("tasknear agri save ok.");
+                    callback(null, null);
+                }
+            })
+        })
     }
 })();
