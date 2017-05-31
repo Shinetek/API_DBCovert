@@ -37,10 +37,12 @@
      */
     function _SaveAllInfo(result, time) {
         var schema = new subSysFaultSchema();
-        result.savetime = moment().utc().format("YYYYMMDD") + " " + moment().utc().format("hhmmss");
-        result.urltime = time;
+
         //初始化
         schema.initData(result);
+
+        schema.savetime = moment().utc().format("YYYYMMDD") + " " + moment().utc().format("hhmmss");
+        schema.urltime = time;
         //保存
         schema.save(function (err) {
             if (err) {
@@ -64,6 +66,7 @@
             version: '0.0.1'
         });
         client.get("/RSMS/api/rest/mcs/faultlog/stat?date=" + time, function (err, req, res, obj) {
+            console.log("/RSMS/api/rest/mcs/faultlog/stat?date=" + time);
             if (obj.result != null) {
                 _deleteAllInfo(callback, obj.result, time);
             }
