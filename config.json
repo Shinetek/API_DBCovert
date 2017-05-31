@@ -1,5 +1,8 @@
 {
   "MongodbUrl": "mongodb://shk401:68400145@123.56.135.196:6840/FY4MCS",
   "APIURL": "http://10.24.241.17:8888",
-  "TimetableInterval": 900000
+  "TimetableInterval": 900000,
+  "ycname_Convert": {
+    "遥控帧计数": ""
+  }
 }

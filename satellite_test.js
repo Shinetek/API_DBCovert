@@ -1,6 +1,8 @@
 /**
- * Created by lenovo on 2017/5/9.
- * 三个仪器的任务详情
+ * Created by lenovo on 2017/5/24.
+ */
+/**
+ * Created by lenovo on 2017/5/11.
  */
 (function () {
 
@@ -27,8 +29,10 @@
     (function () {
 
         var opt_Mongoose = {
-            server: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}},
-            replset: {socketOptions: {keepAlive: 1, connectTimeoutMS: 30000}}
+            server: {
+                auto_reconnect: true,
+                poolSize: 8000
+            }
         };
 
         mongoose.connect(MONGOOSE_URI, opt_Mongoose);
@@ -53,7 +57,7 @@
 
             var Config = require("./config.json");
             var interval = (Config.TimetableInterval) ? Config.TimetableInterval : 900000;
-            interval = interval;
+            interval = interval + 90908;
             var Timer = require('./lib/timer.js').Timer;
             var timer = new Timer(interval);
 
@@ -64,45 +68,24 @@
                 timeTwoFunc();
             });
 
-            //开始 Timer
+            //开始 Timer todo
             timer.start();
 
             /**
-             * 并行版本 仅仅对任务列表进行入库
+             * 并行版本
              */
-            function timeTwoFunc() {//同步进行所有函数
+            function timeTwoFunc() {
+                //同步进行所有函数
 
-
-                Task_Detail_GIIRS(function () {
-                    console.log(" 7 Task_Detail_GIIRS end");
-                });
-                Task_Detail_AGRI(function () {
-                    console.log(" 7 Task_Detail_AGRI end");
-                });
-                Task_Detail_LMI(function () {
-                    console.log(" 7 Task_Detail_LMI end");
-                });
+                /*require('./process/capability.js')("dts");
+                 require('./process/capability.js')("mrs");
+                 require('./process/capability.js')("nrs");*/
+                require('./process/satellite.js')();
                 //循环计数
-                require('./process/timerlog.js')("fy4a_task_detail");
+                require('./process/timerlog.js')("fy4a_satellite_test");
             }
 
-            //任务详情
-            function Task_Detail_GIIRS(callback) {
-                console.log("8  Task_Detail_GIIRS 获取开始 ");
-                require('./process/taskdetail.js')('giirs', callback);
-            }
 
-            //任务详情
-            function Task_Detail_AGRI(callback) {
-                console.log("8  Task_Detail_AGRI 获取开始 ");
-                require('./process/taskdetail.js')('agri', callback);
-            }
-
-            //任务详情
-            function Task_Detail_LMI(callback) {
-                console.log("8  Task_Detail_LMI 获取开始 ");
-                require('./process/taskdetail.js')('lmi', callback);
-            }
         })();
     })();
 

@@ -28,11 +28,11 @@
       "maxMemoryRestart": "250M"
     },
     {
-      "name": "fy4a_tasklist",
-      "script": "./fy4a_tasklist.js",
+      "name": "fy4a_task",
+      "script": "./fy4a_task.js",
       "exec_mode": "fork",
-      "output": "./pm2_log/fy4a_tasklist.log",
-      "error": "./pm2_log/fy4a_tasklist.err",
+      "output": "./pm2_log/fy4a_task.log",
+      "error": "./pm2_log/fy4a_task.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
     },

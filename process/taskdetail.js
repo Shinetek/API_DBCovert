@@ -29,7 +29,7 @@
                         var m_TaskListJson = results.get_tasklist;
                         async.map(m_TaskListJson, function (DataInfo, callback) {
                             //通过URL获取 TASK  详情
-                            _getTaskDetailInfo(DataInfo, callback);
+                            _getTaskDetailInfo(DataInfo, sysname, callback);
                         }, function (err, result) {
                             console.log("所有的 task detail 详情数据 获取完成");
                             callback(err, result);
@@ -107,8 +107,10 @@
         function _getTaskDetailInfo(taskinfo, sysname, callback) {
             //获取每一个Task的 ID
             var m_TaskID = taskinfo.task_id;
+         
             var m_DateStr = moment().utc().format("YYYYMMDD");
             var m_APIPath = "/RSMS/api/rest/mcs/task/detail/" + sysname + "?task_id=" + m_TaskID + "&date=" + m_DateStr;
+            console.log(m_APIPath);
             var client = restify.createJsonClient({
                 url: basePath,
                 version: '*'

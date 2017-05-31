@@ -37,11 +37,8 @@
             });
     }
 
-    module.exports = function (sys, callback) {
-
-
+    module.exports = function (callback) {
         _deleteAllInfo(callback);
-
         var month = moment().utc().format("YYYYMMDD");
         var hour = moment().utc().format("hhmmss");
         client.get("/RSMS/api/rest/mcs/task/near/lmi?date=" + month + "&time=" + hour, function (err, req, res, obj) {

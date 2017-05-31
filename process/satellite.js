@@ -113,6 +113,7 @@
             DataInfo.up_date = m_DateStr + m_TimeStr;
             DataInfo.url_date = datestr;
             DataInfo.selected = false;
+            DataInfo.yaname = DataInfo.yaname.toString().Trim();
             DataInfo.ycname_En = get_ycname_En(DataInfo.yaname);
             var schema = new satelliteSchema();
             schema.initData(DataInfo);
@@ -130,6 +131,7 @@
 
         //
         function get_ycname_En(ycname) {
+            console.log(ycname);
 
             //根据当前遥测名称获取 英文名称
             if (ycname) {
@@ -141,9 +143,10 @@
 
         }
 
-        var m_NameConvert = {
+        var m_NameConvert = m_config.ycname_Convert;
+      /*  {
             "遥控帧计数": ""
-        }
+        }*/
     }
 
 })
