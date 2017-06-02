@@ -7,7 +7,7 @@
     'use strict';
 
     var satelliteSchema = require("../module/satellite_schame.js");
-    var satellitegroupSchema = require("../module/satellite_group_schame.js");
+    var satellitegroupSchema = require("../module/satellite_group_schema.js");
     var _ = require('lodash');
     var async = require("async");
     var restify = require("restify");
@@ -77,13 +77,38 @@
                 save_data_group: ['get_data', 'del_data', 'save_data', 'del_data_group', function (results, callback) {
 
                     var m_jsonData = results.get_data;
-                    var m_LevelList = -[];
+                    var m_LevelList = [];
                     _.forEach(m_jsonData, function (value) {
-                        // console.log(value.level);
+                        //console.log(value.level);
                         m_LevelList.push(value.level);
                     });
                     m_LevelList = _.uniq(m_LevelList);
-                    async.each(m_LevelList, function (DataInfo, callback) {
+                    //console.log(m_LevelList);
+                    var m_DataGroupList = [];
+                    _.forEach(m_LevelList, function (m_Level) {
+
+                        var m_DataGroup = {};
+                        m_DataGroup.level = m_Level;
+                        m_DataGroup.url_date = m_DateStr;
+                        m_DataGroup.up_date = moment().utc().format("YYYYMMDD") + moment().utc().format("hhmmss");
+                        m_DataGroup.Numbers = [];
+                        _.forEach(m_jsonData, function (value) {
+
+                            if (value.level == m_DataGroup.level) {
+                                var m_Number = {};
+                                m_Number.ycname = value.ycname;
+                                m_Number.ycvalue = value.ycvalue;
+                                m_Number.level = value.level;
+                                m_Number.state = value.state;
+                                m_Number.selected = false;
+                                m_Number.ycname_En = "";
+                                m_DataGroup.Numbers.push(m_Number);
+                            }
+                        });
+                        m_DataGroupList.push(m_DataGroup);
+                    });
+
+                    async.each(m_DataGroupList, function (DataInfo, callback) {
                         InsertGroupDataSchema(m_DateStr, DataInfo, callback);
                     }, function (err, result) {
                         console.log("遥测等级 插入完成 插值完成");
@@ -178,7 +203,11 @@
 
         function InsertGroupDataSchema(datestr, DataInfo, callback) {
             var schema = new satellitegroupSchema();
+            var m_Data = {};
+            //  m_Data.level = DataInfo;
+            m_Data.url_date = datestr;
             schema.initData(DataInfo);
+            //console.log(schema);
             schema.save(function (err) {
                 if (err) {
                     console.log(err);
