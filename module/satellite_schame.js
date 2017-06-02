@@ -9,6 +9,8 @@
     var satelliteSchema = new Schema({
         ycname: {type: String},
         ycvalue: {type: String},
+        level: {type: String},
+        state: {type: String},
         up_date: {type: String},
         url_date: {type: String},
         selected: {type: Boolean},
