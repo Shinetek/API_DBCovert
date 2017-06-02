@@ -7,7 +7,7 @@
     'use strict';
 
     var satelliteSchema = require("../module/satellite_schame.js");
-
+    var satellitegroupSchema = require("../module/satellite_group_schame.js");
     var _ = require('lodash');
     var async = require("async");
     var restify = require("restify");
@@ -55,10 +55,43 @@
                     async.each(m_jsonData, function (DataInfo, callback) {
                         InsertDataSchema(m_DateStr, DataInfo, callback);
                     }, function (err, result) {
-                        console.log("所有插值完成");
+                        console.log("遥测详情 插入完成 插值完成");
+                        //
+                        callback(err, result);
+                    })
+                }],
+                del_data_group: ['get_data', 'del_data', 'save_data', function (results, callback) {
+                    if (!_.isUndefined(results.get_data)) {
+                        if (results.get_data.length > 0) {
+                            //删除
+                            _DeleteAllGroupInfo(callback);
+                        }
+                        else {
+                            callback("遥测 状态数据获取 返回结构异常", null);
+                        }
+                    }
+                    else {
+                        callback("遥测 状态数据获取  返回内容异常", null);
+                    }
+                }],
+                save_data_group: ['get_data', 'del_data', 'save_data', 'del_data_group', function (results, callback) {
+
+                    var m_jsonData = results.get_data;
+                    var m_LevelList = -[];
+                    _.forEach(m_jsonData, function (value) {
+                        // console.log(value.level);
+                        m_LevelList.push(value.level);
+                    });
+                    m_LevelList = _.uniq(m_LevelList);
+                    async.each(m_LevelList, function (DataInfo, callback) {
+                        InsertGroupDataSchema(m_DateStr, DataInfo, callback);
+                    }, function (err, result) {
+                        console.log("遥测等级 插入完成 插值完成");
+                        //
                         callback(err, result);
                     })
                 }]
+
             }, function (err, results) {
                 console.log('err = ', err);
                 //  console.log('results = ', results);
@@ -106,6 +139,20 @@
                 });
         }
 
+        function _DeleteAllGroupInfo(callback) {
+            var conditions = {};
+            satellitegroupSchema
+                .remove(conditions, function (err) {
+                    if (err) {
+                        console.log("remove 遥测数据分组  失败" + conditions.sys);
+                        callback(err, null);
+                    } else {
+                        console.log("remove 遥测数据分组 成功" + conditions.sys);
+                        callback(null, null);
+                    }
+                });
+        }
+
         //3
         function InsertDataSchema(datestr, DataInfo, callback) {
             var m_DateStr = moment().utc().format("YYYYMMDD");
@@ -128,6 +175,20 @@
             });
         }
 
+
+        function InsertGroupDataSchema(datestr, DataInfo, callback) {
+            var schema = new satellitegroupSchema();
+            schema.initData(DataInfo);
+            schema.save(function (err) {
+                if (err) {
+                    console.log(err);
+                    callback(err, null);
+                }
+                else {
+                    callback(null, null);
+                }
+            });
+        }
 
         //
         function get_ycname_En(ycname) {
