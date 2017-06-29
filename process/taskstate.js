@@ -5,7 +5,9 @@
     'use strict';
 
     var restify = require('restify');
-    var sd = require('silly-datetime');
+    //var sd = require('silly-datetime');
+
+    var moment = require("moment");
     var taskStateSchema = require('../module/taskstate-schema.js');
     var m_config = require("../config.json");
     var basePath = m_config.APIURL;
@@ -39,8 +41,9 @@
 
         //新建date
         var date = new Date();
-        var month = sd.format(date, 'YYYYMMDD');
-        var hour = sd.format(date, 'HHmmss');
+        var month = moment().utc().format("YYYYMMDD");
+        var hour = moment().utc().format("hhmmss");
+
         ///删除原有数据
         _deleteAllInfo(callback);
         console.log(month + "_" + hour + ":  最近数据获取 taskstate!");
