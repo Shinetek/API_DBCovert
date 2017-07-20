@@ -94,6 +94,7 @@
                     if (err) {
                         console.log("remove faultlevel E infos 失败");
                         callback(err, null);
+                        throw err;
                     } else {
                         console.log("remove faultlevel E infos 成功");
                         callback(null, null);
