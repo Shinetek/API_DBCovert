@@ -53,6 +53,15 @@
       "error": "./pm2_log/fy4a_capability.err",
       "logDateFormat": "YYYY-MM-DD HH:mm Z",
       "maxMemoryRestart": "250M"
+    },
+    {
+      "name": "fy4a_timetable",
+      "script": "./fy4a_timetable.js",
+      "exec_mode": "fork",
+      "output": "./pm2_log/fy4a_timetable.log",
+      "error": "./pm2_log/fy4a_timetable.err",
+      "logDateFormat": "YYYY-MM-DD HH:mm Z",
+      "maxMemoryRestart": "250M"
     }
   ]
 }

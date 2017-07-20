@@ -1,0 +1,1481 @@
+[
+  {
+    "code": "10",
+    "describe": "OK",
+    "result": [
+      {
+        "TaskCode": "AFN20170718000000",
+        "ScanEndTime": "20170718001250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "1",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718000000"
+      },
+      {
+        "TaskCode": "AFN20170718001500",
+        "ScanEndTime": "20170718002750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "2",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718001500"
+      },
+      {
+        "TaskCode": "AFN20170718003000",
+        "ScanEndTime": "20170718004250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "3",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718003000"
+      },
+      {
+        "TaskCode": "AFN20170718004500",
+        "ScanEndTime": "20170718005750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "4",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718004500"
+      },
+      {
+        "TaskCode": "AFN20170718010000",
+        "ScanEndTime": "20170718011250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "5",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718010000"
+      },
+      {
+        "TaskCode": "AFN20170718011500",
+        "ScanEndTime": "20170718012750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "6",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718011500"
+      },
+      {
+        "TaskCode": "AFN20170718013000",
+        "ScanEndTime": "20170718014250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "7",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718013000"
+      },
+      {
+        "TaskCode": "AFN20170718014500",
+        "ScanEndTime": "20170718015750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "8",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718014500"
+      },
+      {
+        "TaskCode": "AFN20170718020000",
+        "ScanEndTime": "20170718021250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "9",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718020000"
+      },
+      {
+        "TaskCode": "AFN20170718021500",
+        "ScanEndTime": "20170718022750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "10",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718021500"
+      },
+      {
+        "TaskCode": "AFN20170718023000",
+        "ScanEndTime": "20170718024250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "11",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718023000"
+      },
+      {
+        "TaskCode": "AFN20170718024500",
+        "ScanEndTime": "20170718025750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "12",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718024500"
+      },
+      {
+        "TaskCode": "AFN20170718030000",
+        "ScanEndTime": "20170718031250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "13",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718030000"
+      },
+      {
+        "TaskCode": "AFN20170718031500",
+        "ScanEndTime": "20170718032750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "14",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718031500"
+      },
+      {
+        "TaskCode": "AFN20170718033000",
+        "ScanEndTime": "20170718034250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "15",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718033000"
+      },
+      {
+        "TaskCode": "AFN20170718034500",
+        "ScanEndTime": "20170718035750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "16",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718034500"
+      },
+      {
+        "TaskCode": "AFN20170718040000",
+        "ScanEndTime": "20170718041250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "17",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718040000"
+      },
+      {
+        "TaskCode": "AFN20170718041500",
+        "ScanEndTime": "20170718042750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "18",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718041500"
+      },
+      {
+        "TaskCode": "AFN20170718043000",
+        "ScanEndTime": "20170718044250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "19",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718043000"
+      },
+      {
+        "TaskCode": "AFN20170718044500",
+        "ScanEndTime": "20170718045750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "20",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718044500"
+      },
+      {
+        "TaskCode": "AFN20170718050000",
+        "ScanEndTime": "20170718051250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "21",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718050000"
+      },
+      {
+        "TaskCode": "AFN20170718051500",
+        "ScanEndTime": "20170718052750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "22",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718051500"
+      },
+      {
+        "TaskCode": "AFN20170718053000",
+        "ScanEndTime": "20170718054250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "23",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718053000"
+      },
+      {
+        "TaskCode": "AFN20170718054500",
+        "ScanEndTime": "20170718055750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "24",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718054500"
+      },
+      {
+        "TaskCode": "AFN20170718060000",
+        "ScanEndTime": "20170718061250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "25",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718060000"
+      },
+      {
+        "TaskCode": "AFN20170718061500",
+        "ScanEndTime": "20170718062750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "26",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718061500"
+      },
+      {
+        "TaskCode": "AFN20170718063000",
+        "ScanEndTime": "20170718064250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "27",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718063000"
+      },
+      {
+        "TaskCode": "AFN20170718064500",
+        "ScanEndTime": "20170718065750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "28",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718064500"
+      },
+      {
+        "TaskCode": "AFN20170718070000",
+        "ScanEndTime": "20170718071250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "29",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718070000"
+      },
+      {
+        "TaskCode": "AFN20170718071500",
+        "ScanEndTime": "20170718072750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "30",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718071500"
+      },
+      {
+        "TaskCode": "AFN20170718073000",
+        "ScanEndTime": "20170718074250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "31",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718073000"
+      },
+      {
+        "TaskCode": "AFN20170718074500",
+        "ScanEndTime": "20170718075750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "32",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718074500"
+      },
+      {
+        "TaskCode": "AFN20170718080000",
+        "ScanEndTime": "20170718081250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "33",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718080000"
+      },
+      {
+        "TaskCode": "AFN20170718081500",
+        "ScanEndTime": "20170718082750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "34",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718081500"
+      },
+      {
+        "TaskCode": "AFN20170718083000",
+        "ScanEndTime": "20170718084250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "35",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718083000"
+      },
+      {
+        "TaskCode": "AFN20170718084500",
+        "ScanEndTime": "20170718085750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "36",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718084500"
+      },
+      {
+        "TaskCode": "AFN20170718090000",
+        "ScanEndTime": "20170718091250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "37",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718090000"
+      },
+      {
+        "TaskCode": "AFN20170718091500",
+        "ScanEndTime": "20170718092750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "38",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718091500"
+      },
+      {
+        "TaskCode": "AFN20170718093000",
+        "ScanEndTime": "20170718094250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "39",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718093000"
+      },
+      {
+        "TaskCode": "AFN20170718094500",
+        "ScanEndTime": "20170718095750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "40",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718094500"
+      },
+      {
+        "TaskCode": "AFN20170718100000",
+        "ScanEndTime": "20170718101250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "41",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718100000"
+      },
+      {
+        "TaskCode": "AFN20170718101500",
+        "ScanEndTime": "20170718102750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "42",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718101500"
+      },
+      {
+        "TaskCode": "AFN20170718103000",
+        "ScanEndTime": "20170718104250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "43",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718103000"
+      },
+      {
+        "TaskCode": "AFN20170718104500",
+        "ScanEndTime": "20170718105750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "44",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718104500"
+      },
+      {
+        "TaskCode": "AFN20170718110000",
+        "ScanEndTime": "20170718111250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "45",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718110000"
+      },
+      {
+        "TaskCode": "AFN20170718111500",
+        "ScanEndTime": "20170718112750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "46",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718111500"
+      },
+      {
+        "TaskCode": "AFN20170718113000",
+        "ScanEndTime": "20170718114250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "47",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718113000"
+      },
+      {
+        "TaskCode": "AFN20170718114500",
+        "ScanEndTime": "20170718115750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "48",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718114500"
+      },
+      {
+        "TaskCode": "AFN20170718120000",
+        "ScanEndTime": "20170718121250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "49",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718120000"
+      },
+      {
+        "TaskCode": "AFN20170718121500",
+        "ScanEndTime": "20170718122750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "50",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718121500"
+      },
+      {
+        "TaskCode": "AFN20170718123000",
+        "ScanEndTime": "20170718124250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "51",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718123000"
+      },
+      {
+        "TaskCode": "AFN20170718124500",
+        "ScanEndTime": "20170718125750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "52",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718124500"
+      },
+      {
+        "TaskCode": "AFN20170718130000",
+        "ScanEndTime": "20170718131250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "53",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718130000"
+      },
+      {
+        "TaskCode": "AFN20170718131500",
+        "ScanEndTime": "20170718132750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "54",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718131500"
+      },
+      {
+        "TaskCode": "AFN20170718133000",
+        "ScanEndTime": "20170718134250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "55",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718133000"
+      },
+      {
+        "TaskCode": "AFN20170718134500",
+        "ScanEndTime": "20170718135750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "56",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718134500"
+      },
+      {
+        "TaskCode": "AFN20170718140000",
+        "ScanEndTime": "20170718141250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "57",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718140000"
+      },
+      {
+        "TaskCode": "AFN20170718141500",
+        "ScanEndTime": "20170718142750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "58",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718141500"
+      },
+      {
+        "TaskCode": "AFN20170718143000",
+        "ScanEndTime": "20170718144250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "59",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718143000"
+      },
+      {
+        "TaskCode": "AFN20170718144500",
+        "ScanEndTime": "20170718145750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "60",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718144500"
+      },
+      {
+        "TaskCode": "AFN20170718150000",
+        "ScanEndTime": "20170718151250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "61",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718150000"
+      },
+      {
+        "TaskCode": "AFN20170718151500",
+        "ScanEndTime": "20170718152750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "62",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718151500"
+      },
+      {
+        "TaskCode": "AFN20170718153000",
+        "ScanEndTime": "20170718154250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "63",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718153000"
+      },
+      {
+        "TaskCode": "AFN20170718154500",
+        "ScanEndTime": "20170718155750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "64",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718154500"
+      },
+      {
+        "TaskCode": "AFN20170718160000",
+        "ScanEndTime": "20170718161250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "65",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718160000"
+      },
+      {
+        "TaskCode": "AFN20170718161500",
+        "ScanEndTime": "20170718162750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "66",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718161500"
+      },
+      {
+        "TaskCode": "AFN20170718163000",
+        "ScanEndTime": "20170718164250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "67",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718163000"
+      },
+      {
+        "TaskCode": "AFN20170718164500",
+        "ScanEndTime": "20170718165750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "68",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718164500"
+      },
+      {
+        "TaskCode": "AFN20170718200000",
+        "ScanEndTime": "20170718201250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "69",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718200000"
+      },
+      {
+        "TaskCode": "AFN20170718201500",
+        "ScanEndTime": "20170718202750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "70",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718201500"
+      },
+      {
+        "TaskCode": "AFN20170718203000",
+        "ScanEndTime": "20170718204250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "71",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718203000"
+      },
+      {
+        "TaskCode": "AFN20170718204500",
+        "ScanEndTime": "20170718205750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "72",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718204500"
+      },
+      {
+        "TaskCode": "AFN20170718210000",
+        "ScanEndTime": "20170718211250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "73",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "2",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718210000"
+      },
+      {
+        "TaskCode": "AFN20170718211500",
+        "ScanEndTime": "20170718212750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "74",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "1",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718211500"
+      },
+      {
+        "TaskCode": "AFN20170718213000",
+        "ScanEndTime": "20170718214250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "75",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718213000"
+      },
+      {
+        "TaskCode": "AFN20170718214500",
+        "ScanEndTime": "20170718215750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "76",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718214500"
+      },
+      {
+        "TaskCode": "AFN20170718220000",
+        "ScanEndTime": "20170718221250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "77",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718220000"
+      },
+      {
+        "TaskCode": "AFN20170718221500",
+        "ScanEndTime": "20170718222750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "78",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718221500"
+      },
+      {
+        "TaskCode": "AFN20170718223000",
+        "ScanEndTime": "20170718224250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "79",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718223000"
+      },
+      {
+        "TaskCode": "AFN20170718224500",
+        "ScanEndTime": "20170718225750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "80",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718224500"
+      },
+      {
+        "TaskCode": "AFN20170718230000",
+        "ScanEndTime": "20170718231250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "81",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718230000"
+      },
+      {
+        "TaskCode": "AFN20170718231500",
+        "ScanEndTime": "20170718232750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "82",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718231500"
+      },
+      {
+        "TaskCode": "AFN20170718233000",
+        "ScanEndTime": "20170718234250",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "83",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718233000"
+      },
+      {
+        "TaskCode": "AFN20170718234500",
+        "ScanEndTime": "20170718235750",
+        "TaskName": "FulldiskNormal",
+        "TaskNumber": "84",
+        "Params": {
+          "SunAvoid": "0",
+          "AreaNum": "3",
+          "IsWind": "0",
+          "IsReturn": "1"
+        },
+        "ScanBeginTime": "20170718234500"
+      }
+    ]
+  },
+  {
+    "code": "10",
+    "describe": "OK",
+    "result": [
+      {
+        "TaskCode": "GRS20170718000000",
+        "ScanEndTime": "20170718001049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "1",
+        "Params": {
+          "RegionNo": "1",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718000000"
+      },
+      {
+        "TaskCode": "GRS20170718001500",
+        "ScanEndTime": "20170718002549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "2",
+        "Params": {
+          "RegionNo": "1",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718001500"
+      },
+      {
+        "TaskCode": "GRS20170718004500",
+        "ScanEndTime": "20170718051049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "3",
+        "Params": {
+          "RegionNo": "1",
+          "RegionType": "1",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "194",
+          "NSDirection": "0",
+          "EndColumnNo": "547",
+          "IsReturn": "1",
+          "ReserveNum": "378",
+          "SunAvoid": "0",
+          "StartColumnNo": "133",
+          "InRegionSum": "14",
+          "InRegionNumber": "1",
+          "EndLineNo": "473",
+          "EWWalkMode": "000085"
+        },
+        "ScanBeginTime": "20170718004500"
+      },
+      {
+        "TaskCode": "GRS20170718053000",
+        "ScanEndTime": "20170718054049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "4",
+        "Params": {
+          "RegionNo": "1",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "000085"
+        },
+        "ScanBeginTime": "20170718053000"
+      },
+      {
+        "TaskCode": "GRS20170718054500",
+        "ScanEndTime": "20170718055549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "5",
+        "Params": {
+          "RegionNo": "1",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718054500"
+      },
+      {
+        "TaskCode": "GRS20170718060000",
+        "ScanEndTime": "20170718061049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "6",
+        "Params": {
+          "RegionNo": "2",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718060000"
+      },
+      {
+        "TaskCode": "GRS20170718061500",
+        "ScanEndTime": "20170718062549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "7",
+        "Params": {
+          "RegionNo": "2",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718061500"
+      },
+      {
+        "TaskCode": "GRS20170718064500",
+        "ScanEndTime": "20170718111049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "8",
+        "Params": {
+          "RegionNo": "2",
+          "RegionType": "1",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "194",
+          "NSDirection": "0",
+          "EndColumnNo": "547",
+          "IsReturn": "1",
+          "ReserveNum": "378",
+          "SunAvoid": "0",
+          "StartColumnNo": "133",
+          "InRegionSum": "14",
+          "InRegionNumber": "1",
+          "EndLineNo": "473",
+          "EWWalkMode": "000085"
+        },
+        "ScanBeginTime": "20170718064500"
+      },
+      {
+        "TaskCode": "GRS20170718113000",
+        "ScanEndTime": "20170718114049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "9",
+        "Params": {
+          "RegionNo": "2",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718113000"
+      },
+      {
+        "TaskCode": "GRS20170718114500",
+        "ScanEndTime": "20170718115549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "10",
+        "Params": {
+          "RegionNo": "2",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718114500"
+      },
+      {
+        "TaskCode": "GRS20170718120000",
+        "ScanEndTime": "20170718121049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "11",
+        "Params": {
+          "RegionNo": "3",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718120000"
+      },
+      {
+        "TaskCode": "GRS20170718121500",
+        "ScanEndTime": "20170718122549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "12",
+        "Params": {
+          "RegionNo": "3",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718121500"
+      },
+      {
+        "TaskCode": "GRS20170718124500",
+        "ScanEndTime": "20170718231049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "13",
+        "Params": {
+          "RegionNo": "4",
+          "RegionType": "1",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "194",
+          "NSDirection": "0",
+          "EndColumnNo": "547",
+          "IsReturn": "1",
+          "ReserveNum": "460",
+          "SunAvoid": "0",
+          "StartColumnNo": "133",
+          "InRegionSum": "14",
+          "InRegionNumber": "1",
+          "EndLineNo": "473",
+          "EWWalkMode": "000085"
+        },
+        "ScanBeginTime": "20170718124500"
+      },
+      {
+        "TaskCode": "GRS20170718233000",
+        "ScanEndTime": "20170718234049",
+        "TaskName": "RegionScan",
+        "TaskNumber": "14",
+        "Params": {
+          "RegionNo": "4",
+          "RegionType": "2",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "197",
+          "NSDirection": "0",
+          "EndColumnNo": "478",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "374",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "236",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718233000"
+      },
+      {
+        "TaskCode": "GRS20170718234500",
+        "ScanEndTime": "20170718235549",
+        "TaskName": "RegionScan",
+        "TaskNumber": "15",
+        "Params": {
+          "RegionNo": "4",
+          "RegionType": "3",
+          "MirrorShift": "AA",
+          "EWDirection": "0",
+          "TargetPosDuration": "16",
+          "StartLineNo": "209",
+          "NSDirection": "0",
+          "EndColumnNo": "544",
+          "IsReturn": "1",
+          "ReserveNum": "28",
+          "SunAvoid": "0",
+          "StartColumnNo": "440",
+          "InRegionSum": "1",
+          "InRegionNumber": "1",
+          "EndLineNo": "248",
+          "EWWalkMode": "AAAAAA"
+        },
+        "ScanBeginTime": "20170718234500"
+      }
+    ]
+  }
+]
