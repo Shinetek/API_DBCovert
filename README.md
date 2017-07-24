@@ -59,5 +59,17 @@ api 转化 mongodb 的一个小程序
     pm2 说明
     实现如下URL转化
     /_ds/mcs/task/detail/XXXX?task_id=GLS20170426061500&date=20170426 
+    
+----------
+### 进程6 时间表详情：
+     pm2 显示名称
+     "name": "fy4a_timetable",
+     pm2 运行文件
+     "script": "./fy4a_timetable.js",
+     pm2 说明
+     实现如下URL转化
+     RSMS/api/rest/mcs/list/agri?date=20170718(lmi giirs)      
+     
+    
    
   
