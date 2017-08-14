@@ -68,7 +68,7 @@
                 timeTwoFunc();
             });
 
-            //开始 Timer todo
+            //开始 Timer
             timer.start();
 
             /**
